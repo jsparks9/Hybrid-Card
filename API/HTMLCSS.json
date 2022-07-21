@@ -1,0 +1,74 @@
+[
+  {
+    "q": "<h3>What is HTML</h3>",
+    "a": "<p>HTML stands for Hypertext Markup Language and consists of various tags to describe the content of a document - utilized as the basis for all web pages, along with CSS and JavaScript</p>"
+  },
+  {
+    "q": "<h3>What is the structure of an HTML document? List some tags. What is <code>&lt;head&gt;</code> used for? <code>&lt;body&gt;</code>?</h3>",
+    "a": "<p>Start with the doctype declaration, then <code>&lt;html&gt;</code>, then <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>. The head contains the metadata for the page, while the body contains the content that is rendered to the screen. Other tags: div, span, p, ul, ol, li, strong, em, table</p>"
+  },
+  {
+    "q": "<h3>What is a doctype?</h3>",
+    "a": "<p>First tag in the document - defines what type of file it is - whether html 4 or 5, etc</p>"
+  },
+  {
+    "q": "<h3>What is the tag for an ordered list? Unordered list?</h3>",
+    "a": "<p>ordered list: ol, unordered list: ul. Both use li - list items</p>"
+  },
+  {
+    "q": "<h3>What are some HTML5 tags? Why were HTML5 tags introduced?</h3>",
+    "a": "<p>HTML5 introduced semantic tags to more accurately reflect the content of the tags. Examples: <code>&lt;strong&gt;</code> instead of <code>&lt;b&gt;</code>, <code>&lt;em&gt;</code> instead of <code>&lt;i&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;aside&gt;</code> instead of reusing <code>&lt;div&gt;</code> tags everywhere</p>"
+  },
+  {
+    "q": "<h3>Do all tags come in a pair? What are the other things inside tags called? list some.</h3>",
+    "a": "<p>No - tags either have a closing tag or are self-closing (<code>&lt;tag /&gt;</code>). Attributes are contained within tags - examples: id, class, style, height, width, etc</p>"
+  },
+  {
+    "q": "<h3>What is the syntax for a comment in HTML?</h3>",
+    "a": "<p><code>&lt;!-- comments go in here --&gt;</code></p>"
+  },
+  {
+    "q": "<h3>Give me the HTML markup for a table.</h3>",
+    "a": "<div class=\"highlight highlight-text-html-basic notranslate position-relative overflow-auto\"><pre><span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">table</span><span class=\"pl-kos\">&gt;</span>\n  <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">caption</span><span class=\"pl-kos\">&gt;</span>optional<span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">caption</span><span class=\"pl-kos\">&gt;</span>\n  <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">thead</span><span class=\"pl-kos\">&gt;</span>\n    <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">tr</span><span class=\"pl-kos\">&gt;</span>\n     <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span>Heading 1<span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span><span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span>Heading 2<span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span>\n   <span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">tr</span><span class=\"pl-kos\">&gt;</span>\n  <span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">thead</span><span class=\"pl-kos\">&gt;</span>\n   <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">tr</span><span class=\"pl-kos\">&gt;</span>\n    <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span>Cell 1<span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span><span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span>Cell 2<span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">td</span><span class=\"pl-kos\">&gt;</span>\n   <span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">tr</span><span class=\"pl-kos\">&gt;</span>\n  <span class=\"pl-kos\">&lt;</span><span class=\"pl-ent\">tbody</span><span class=\"pl-kos\">&gt;</span>\n  <span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">tbody</span><span class=\"pl-kos\">&gt;</span>\n<span class=\"pl-kos\">&lt;/</span><span class=\"pl-ent\">table</span><span class=\"pl-kos\">&gt;</span></pre><div class=\"zeroclipboard-container position-absolute right-0 top-0\">\n</div></div>"
+  },
+  {
+    "q": "<h3>What are some tags you would use in a form?</h3>",
+    "a": "<p>Form tags: <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;option&gt;</code></p>"
+  },
+  {
+    "q": "<h3>What is CSS? what are the different ways of styling an HTML file? Which is best? why?</h3>",
+    "a": "<ol>\n<li>CSS stands for Cascading Style Sheets - it is a language for styling HTML documents by specifying certain rules for layout and display in key/value pairs. There are 3 ways of styling an HTML file:</li>\n<li>(1) inline - in the <code>style</code> attribute</li>\n<li>(2) internal stylesheet - in the <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code></li>\n<li>(3) external stylesheet - using external <code>.css</code> file, use <code>&lt;link&gt;</code> in the <code>&lt;head&gt;</code></li>\n<li>External stylesheet is best practice due to separation of concerns, reusability, modularity</li>\n</ol>"
+  },
+  {
+    "q": "<h3>Describe the CSS box model.</h3>",
+    "a": "<p>The box model consists of margin (outermost box), then border, then padding, then content (innermost). All box sizes / formatting can be styled with CSS</p>"
+  },
+  {
+    "q": "<h3>Which way has highest priority when styles cascade: inline, internal, and external.</h3>",
+    "a": "<p>Inline has highest priority, then internal/external depending on order. Cascading rules are determined by (1) importance (<code>!important</code> flag), (2) specificity of selector (inline has no selector, highest specificity), then (3) source order.</p>"
+  },
+  {
+    "q": "<h3>Syntax for styling an element? What is a class and how to style them? What is an id? how to style? difference?</h3>",
+    "a": "<div class=\"highlight highlight-source-css notranslate position-relative overflow-auto\"><pre><span class=\"pl-ent\">div</span> { <span class=\"pl-c1\">property</span><span class=\"pl-kos\">:</span> value}\n.<span class=\"pl-c1\">class</span> { <span class=\"pl-c1\">property</span><span class=\"pl-kos\">:</span> value}\n<span class=\"pl-kos\">#</span><span class=\"pl-c1\">id</span> { <span class=\"pl-c1\">property</span><span class=\"pl-kos\">:</span> value}</pre><div class=\"zeroclipboard-container position-absolute right-0 top-0\">\n</div></div>"
+  },
+  {
+    "q": "<h3>What if I want to select child elements, What syntax is that?</h3>",
+    "a": "<p>use direct descendant selector (<code>&gt;</code>) or space for any level nested element</p>"
+  },
+  {
+    "q": "<h3>Can I select multiple elements at once? How?</h3>",
+    "a": "<p>yes, with a comma</p>"
+  },
+  {
+    "q": "<h3>What is a psuedo-class? What is syntax for selecting that?</h3>",
+    "a": "<p>psuedo-class selects an element in a certain state - for example, when hovered over. Use colon (<code>:psuedoselector</code>) syntax</p>"
+  },
+  {
+    "q": "<h3>What is Bootstrap?</h3>",
+    "a": "<p>Bootstrap is a CSS framework with pre-written CSS rules to easily style your page and incorporate responsive design seamlessly. Contains various utilities and components for making a great UI</p>"
+  },
+  {
+    "q": "<h3>Describe the Bootstrap grid system</h3>",
+    "a": "<p>The Bootstrap grid is divided into 12 columns. You wrap the columns in a <code>.row</code> which is in a <code>.container</code> or <code>.container-flex</code>. The columns are responsive - there are classes for different screen sizes which collapse on smaller windows</p>"
+  }
+]

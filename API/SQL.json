@@ -1,0 +1,154 @@
+[
+  {
+    "q": "<h3>What is a relational database?</h3>",
+    "a": "<p>Relational Database Management System(RDBMS) is based on a relational model of data that is stored in databases in separate tables and they are related to the use of a common column. Data can be accessed easily from the relational database using Structured Query Language (SQL). </p>\n<p>(<a target=\"_blank\" href=\"https://www.softwaretestinghelp.com/database-interview-questions/\">softwaretestinghelp.com</a>)</p>"
+  },
+  {
+    "q": "<h3>Name some common RDBMS platforms/vendors</h3>",
+    "a": "<ol>\n<li>Oracle</li>\n<li>MySQL</li>\n<li>Microsoft SQL Server</li>\n<li>PostgreSQL</li>\n<li>IBM Db2</li>\n<li>Microsoft Access</li>\n<li>SQLite</li>\n<li>MariaDB</li>\n<li>Microsoft Azure SQL Database</li>\n<li>Hive</li></ol>\n<p>(<a target=\"_blank\" href=\"https://www.statista.com/statistics/1131568/worldwide-popularity-ranking-relational-database-management-systems/\">statista.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is SQL?</h3>",
+    "a": "<p>SQL stands for Structured Query Language. </p>\n<p id=\"block_quote\">“[SQL] is a standardized programming language that is used to manage relational databases and perform various operations on the data in them. … SQL became the de facto standard programming language for relational databases after they emerged in the late 1970s and early 1980s. … An official SQL standard was adopted by the American National Standards Institute (ANSI) in 1986, with the International Organization for Standardization (ISO) adopting the standard in 1987.” (<a target=\"_blank\" href=\"https://www.techtarget.com/searchdatamanagement/definition/SQL\">techtarget.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What are the sub-languages of SQL?</h3>",
+    "a": "<p>There are 6 sublanguages of SQL.</p>\n<ul>\n<li><span id=\"keyword\">DDL</span> – Data Definition Language.</li>\n<li><span id=\"keyword\">DML</span> – Data Manipulation Language.</li>\n<li><span id=\"keyword\">DRL/DQL</span> – Data Retrieval Language/Data Query Language.</li>\n<li><span id=\"keyword\">TCL</span> – Transaction Query Language.</li>\n<li><span id=\"keyword\">DCL</span> – Data Control Language.</li>\n<li><span id=\"keyword\">SCL</span> – Session Control Language.</li>\n</ul>\n<p>(<a target=\"_blank\" href=\"https://www.interviewsansar.com/sql-sub-languages/\">interviewsansar.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What keywords are associated with DML?</h3>",
+    "a": "<p>DML stands for Data Manipulation Language. DML is associated with the keywords</p>\n<ul>\n<li><span id=\"keyword\">select</span>, which reads rows,</li>\n<li><span id=\"keyword\">insert</span>, which adds a new row, </li>\n<li><span id=\"keyword\">update</span>, which updates an existing row, and </li>\n<li><span id=\"keyword\">delete</span>, which removes an existing row.</li>\n</ul>"
+  },
+  {
+    "q": "<h3>What keywords are associated with DDL?</h3>",
+    "a": "<p>DDL stands for Data Definition Language. DDL is used to define the schema or structure of the database. DDL is associated with the keywords</p>\n<ul>\n<li><span id=\"keyword\">create</span>, which creates and defines a table, </li>\n<li><span id=\"keyword\">alter</span>, which modifies and existing table,</li>\n<li><span id=\"keyword\">truncate</span>, which removes all data from a table but leaves the table, and</li>\n<li><span id=\"keyword\">drop</span>, which drops or deletes the table. </li>\n</ul>\n<p>DDL operations cannot be rolled back with the rollback operation. </p>"
+  },
+  {
+    "q": "<h3>What keywords are associated with DCL?</h3>",
+    "a": "<p>DCL stands for Data Control Language. DCL is used to manage user permissions to access the database. DCL is associated with the keywords</p>\n<ul>\n<li><span id=\"keyword\">grant</span>, which gives user(s) some or all permissions, and </li>\n<li><span id=\"keyword\">revoke</span>, which removes permissions. </li>\n</ul>\n<p>Permissions that can be granted and revoked include <span id=\"keyword\">select</span>, <span id=\"keyword\">insert</span>, <span id=\"keyword\">update</span>, <span id=\"keyword\">delete</span>, <span id=\"keyword\">truncate</span>, <span id=\"keyword\">references</span>, <span id=\"keyword\">trigger</span>, <span id=\"keyword\">create</span>, <span id=\"keyword\">connect</span>, <span id=\"keyword\">temporary</span>, <span id=\"keyword\">execute</span>, and <span id=\"keyword\">usage</span></p>"
+  },
+  {
+    "q": "<h3>What keywords are associated with TCL?</h3>",
+    "a": "<p>TCL stands for Transaction Control Language. TCL is associated with the keywords</p>\n<ul>\n<li><span id=\"keyword\">commit</span>, which must be done so that the changes persist in storage, meaning that the changes become a transaction, </li>\n<li><span id=\"keyword\">rollback</span>, which rolls back an explicit or implicit transaction to the beginning of the transaction, or to a savepoint inside the transaction (<a target=\"_blank\" href=\"https://docs.microsoft.com/en-us/sql/t-sql/language-elements/rollback-transaction-transact-sql?view=sql-server-ver15\">Microsoft</a>), and</li>\n<li><span id=\"keyword\">savepoint</span>, which enables rollback to a different savepoint. </li>\n</ul>"
+  },
+  {
+    "q": "<h3>What keywords are associated with DQL?</h3>",
+    "a": "<p>DQL stands for Data Query Language. DQL is associated with the keyword</p>\n<ul>\n<li><span id=\"keyword\">select</span>, which retrieves data from the database. </li>\n</ul>\n<p>“The <span id=\"keyword\">select</span> statement retrieves data from a database. The data is then returned to a result-set. The <span id=\"keyword\">select</span> statement is the most frequently used action in a database.” (<a target=\"_blank\" href=\"https://www.indeed.com/career-advice/interviewing/database-interview-questions\">Indeed</a>)</p>"
+  },
+  {
+    "q": "<h3>What is a result set?</h3>",
+    "a": "<p>An SQL result set is a set of rows from a database, as well as metadata about the query such as the column names, and the types and sizes of each column. Depending on the database system, the number of rows in the result set may or may not be known. Basically, it is the output of a query. (Wikipedia)</p>"
+  },
+  {
+    "q": "<h3>What is normalization?</h3>",
+    "a": "<p>Normalization is the process to eliminate data redundancy and enhance data integrity in the table. (<a target=\"_blank\" href=\"https://www.simplilearn.com/tutorials/sql-tutorial/what-is-normalization-in-sql\">simplilearn.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What are the normal forms, and to what level do we usually comply to?</h3>",
+    "a": "<p>Normal forms are standards for achieving normalization. We usually comply to 3NF (3rd Normal Form).\n<p>1NF</p>\n<ul>\n<li>Each cell in a table has at most one value, not a composite or table.</li>\n<li>Each row or record is unique, something achieveable with a primary key.</li>\n</ul>\n<p>2NF</p>\n<ul>\n<li>Complies with 1NF rules.</li>\n<li>Single Column Primary Key that does not functionally depend on any subset of candidate key relation(s). </li>\n</ul>\n<p>3NF</p>\n<ul>\n<li>Complies with 2NF rules.</li>\n<li>Has no transitive functional dependencies</li>\n</ul>\n<p>(<a target=\"_blank\" href=\"https://www.simplilearn.com/tutorials/sql-tutorial/what-is-normalization-in-sql\">simplilearn.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is multiplicity?</h3>",
+    "a": "<p>The Multiplicity attribute of a relationship specifies the cardinality or number of instances of an EntityType that can be associated with the instances of another EntityType. The possible types of multiplicity are as follows:</p>\n<ul>\n<li>One-to-many</li>\n<li>Zero-or-one to one</li>\n<li>Zero-or-one to many</li>\n</ul>\n<p>(<a target=\"_blank\" href=\"https://docs.microsoft.com/en-us/openspecs/sql_data_portability/ms-ssdl/9467f022-7739-46e9-b173-e6a71351661e\">Microsoft</a>)</p>"
+  },
+  {
+    "q": "<h3>What is a primary key?</h3>",
+    "a": "<p>The PRIMARY KEY constraint uniquely identifies each record in a table. Primary keys must contain UNIQUE values, and cannot contain NULL values. A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).</p>\n<p>(<a target=\"_blank\" href=\"https://www.w3schools.com/sql/sql_primarykey.ASP\">w3schools.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is a natural key?</h3>",
+    "a": "<p>A natural key is a column or set of columns that already exist in the table (e.g. they are attributes of the entity within the data model) and uniquely identify a record in the table.  Since these columns are attributes of the entity they obviously have business meaning.</p>\n<p>(<a target=\"_blank\" href=\"https://www.mssqltips.com/sqlservertip/5431/surrogate-key-vs-natural-key-differences-and-when-to-use-in-sql-server/\">mssqltips.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is surrogate key?</h3>",
+    "a": "<p>A surrogate key is a system generated (could be GUID, sequence, unique identifier, etc.) value with no business meaning that is used to uniquely identify a record in a table.  The key itself could be made up of one or multiple columns (i.e. Composite Key).</p>\n<p>(<a target=\"_blank\" href=\"https://www.mssqltips.com/sqlservertip/5431/surrogate-key-vs-natural-key-differences-and-when-to-use-in-sql-server/\">mssqltips.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is a composite key?</h3>",
+    "a": "<p>A composite key is a key made up of at least 2 columns. </p>"
+  },
+  {
+    "q": "<h3>What is a foreign key?</h3>",
+    "a": "<p>A <span id=\"keyword\">foreign key</span> is a field (or collection of fields) in one table, that refers to the primary key in another table. The table with the <span id=\"keyword\">foreign key</span> is called the child table, and the table with the primary key is called the referenced or parent table.</p>\n<p>(<a target=\"_blank\" href=\"https://www.w3schools.com/sql/sql_foreignkey.asp\">w3schools.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is referential integrity?</h3>",
+    "a": "<p>A <span id=\"keyword\">referential integrity</span> is a database concept that is used to build and maintain logical relationships between tables to avoid logical corruption of data. It is a very useful and important part in RDBMS.</p>\n<p>Usually, <span id=\"keyword\">referential integrity</span> is made up of the combination of a primary key and a foreign key.</p>\n<p>The main concept of <span id=\"keyword\">referential integrity</span> is that it does not allow to add any record in a table that contains the foreign key unless the reference table containing a corresponding primary key. </p>\n<p>(<a target=\"_blank\" href=\"https://www.w3resource.com/sql/joins/joining-tables-through-referential-integrity.php\">w3resource.com</a>)</p>"
+  },
+  {
+    "q": "<h3>What is the difference between a scalar and an aggregate function?</h3>",
+    "a": "<p>Both return a single value. However, scalar functions take as input a single cell while aggregate functions can take more than one cell as input. For example, if I perform the query</p>\n<p><span id=\"keyword\">select</span> <span id=\"keyword\">floor</span>(field), <span id=\"keyword\">avg</span>(field) <span id=\"keyword\">from</span> table_name;</p>\n<p>the result set will have the first column as the field rounded down while the second column will be a single repeated value that is the average of the field. </p>"
+  },
+  {
+    "q": "<h3>What is a subquery?</h3>",
+    "a": "<p>A subquery is a query that is nested inside a <span id=\"keyword\">select</span> , <span id=\"keyword\">insert</span> , <span id=\"keyword\">update</span> , or <span id=\"keyword\">delete</span> statement, or inside another subquery.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between a union and a join?</h3>",
+    "a": "<p>A union returns a result set of two queries as if the results of the second query are more rows in the result set of the first query. A join usually refers to an inner join. An inner join pairs data from one table or result set with the data from another. Each record from the former will be placed to the left of data from the latter where a condition is met. Usually, this condition is that a field from the former should equal a field from the latter. </p>"
+  },
+  {
+    "q": "<h3>Under what circumstances can two result sets be unioned?</h3>",
+    "a": "<p>Unions require that the number of columns in the select statements to be the same and the datatype of each column in order must be similar.</p>"
+  },
+  {
+    "q": "<h3>What sorts of joins exist in SQL?</h3>",
+    "a": "<p>The joins are <span id=\"keyword\">inner join</span>, <span id=\"keyword\">left join</span> or <span id=\"keyword\">right join</span>, <span id=\"keyword\">outer join</span>, and <span id=\"keyword\">cross join</span>. </p>"
+  },
+  {
+    "q": "<h3>What is a transaction?</h3>",
+    "a": "<p>When DML operations are executed, they need TCL (specifically <span id=\"keyword\">commit</span>) to persist in the database. A DML operation, such as inserting, updating, or deleting rows, only becomes a transaction when the changes are committed, not when the statement executes. </p>"
+  },
+  {
+    "q": "<h3>What are the properties of a transaction?</h3>",
+    "a": "<p>ACID refers to the four properties of a transaction. This stands for </p>\n<ul>\n<li><span id=\"keyword\">Atomic</span>: If a single statement fails, all the changes get rolled back. </li>\n<li><span id=\"keyword\">Consistent</span>: The database remains in previous state unless and until an entire transaction completes. </li>\n<li><span id=\"keyword\">Isolated</span>: Transactions act independently of each other. That means that each transaction cannot access the result of any incomplete transaction. </li>\n<li><span id=\"keyword\">Durable</span>: A failed transaction makes no changes and thus the database is protected from possible data corruption of a non-ACID transaction failing midway. </li>\n</ul>"
+  },
+  {
+    "q": "<h3>What are the transaction isolation levels?</h3>",
+    "a": "<ul>\n<li><span id=\"keyword\">Read uncommitted</span> means transactions can access partially completed transactions, otherwise known as “dirty reads”. This is not supported by most databases. </li>\n<li><span id=\"keyword\">Read committed</span> means data is always committed when read. This may mean data becoming outdated during an ongoing transaction. </li>\n<li><span id=\"keyword\">Repeatable read</span> ensures that other transactions cannot modify data being read by an ongoing transaction. </li>\n<li><span id=\"keyword\">Serial</span> means only one transaction runs at a time. This is practically impossible in modern use of databases.  </li>\n</ul>"
+  },
+  {
+    "q": "<h3>What is a dirty-read? What isolation level(s) resolve this phenonmenon?</h3>",
+    "a": "<p>A dirty read may occur when a transaction reads data that is being modified by another transaction. We can eliminate this by refraining from read uncommitted and instead using at lease read committed isolation levels. </p>"
+  },
+  {
+    "q": "<h3>What is a phantom-read? What isolation level(s) resolve this phenonmenon?</h3>",
+    "a": "<p>A phantom is a row that matches the search criteria but was added or removed between two reads. Another transaction would have changed the data in-between two reads performed by the transaction that got the phantom read. This can be prevented by using serial isolation. </p>"
+  },
+  {
+    "q": "<h3>What is a non-repeatable read? What isolation level(s) resolve this phenomenon?</h3>",
+    "a": "<p>A non-repeatable read is one in which data read twice inside the same transaction cannot be guaranteed to contain the same value. To eliminate this problem, the isolation level must be repeatable read or serial. </p>\n<p>(<a target=\"_blank\" href=\"https://logicalread.com/sql-server-concurrency-nonrepeatable-reads-w01/\">logicalread.com</a>)</p>"
+  },
+  {
+    "q": "<h3>Is SQL considered a procedural, declarative, or functional language?</h3>",
+    "a": "<p>SQL is a declarative language. It is neither procedural nor functional. This means that SQL statements specifies what is to be done rather than how. </p>"
+  },
+  {
+    "q": "<h3>How can you select all of the entries in a table (ex: Users) including all columns?</h3>",
+    "a": "<p><span id=\"keyword\">select</span> * <span id=\"keyword\">from</span> table_name;</p>"
+  },
+  {
+    "q": "<h3>What is a WHERE clause used for?</h3>",
+    "a": "<p>When we select fields from a table, the <span id=\"keyword\">where</span> clause is optional and it can be used to specify a condition that rows must meet in order to be in our result set. </p>"
+  },
+  {
+    "q": "<h3>How can you sort the entries in your result set by a particular column?</h3>",
+    "a": "<p>By using the keyword pair <span id=\"keyword\">order by</span> at the end of a <span id=\"keyword\">select</span> statement, we can sort ascending (<span id=\"keyword\">asc</span>) or descending (<span id=\"keyword\">desc</span>) by any fields, combination of fields, or function results of fields from the original table being queried.  </p>\n<p>For example, one might perform the query </p>\n<p><span id=\"keyword\">select</span> full_name <span id=\"keyword\">from</span> students <span id=\"keyword\">order by</span> <span id=\"keyword\">cast</span>(date_of_birth <span id=\"keyword\">as</span> datetime); </p>"
+  },
+  {
+    "q": "<h3>What is the purpose of the GROUP BY clause?</h3>",
+    "a": "<p>When selecting only aggregates of fields, we can use the <span id=\"keyword\">group by</span> clause to apply the aggregate function separately to different groups. For example, if we want the total sales from each department, we might query </p>\n<p><span id=\"keyword\">select</span> <span id=\"keyword\">sum</span>(sales) <span id=\"keyword\">from</span> all_sales <span id=\"keyword\">where</span> year=2017 <span id=\"keyword\">group by</span> department; </p>"
+  },
+  {
+    "q": "<h3>What are some examples of scalar functions?</h3>",
+    "a": "<p>Scalar functions take a single value as input. Examples include </p>\n<ul>\n<li><span id=\"keyword\"></span>upper</li>\n<li><span id=\"keyword\"></span>lower</li>\n<li><span id=\"keyword\"></span>to_date</li>\n<li><span id=\"keyword\"></span>mid</li>\n<li><span id=\"keyword\"></span>round</li>\n<li><span id=\"keyword\"></span>format</li>\n<li><span id=\"keyword\"></span>ucase</li>\n<li><span id=\"keyword\"></span>lcase</li>\n<li><span id=\"keyword\"></span>to_char</li>\n<li><span id=\"keyword\"></span>len</li>\n</ul>"
+  },
+  {
+    "q": "<h3>What are some examples of aggregate functions?</h3>",
+    "a": "<p>Aggregate functions take one or more values as input. Examples include</p>\n<ul>\n<li><span id=\"keyword\">ave</span></li>\n<li><span id=\"keyword\">count</span></li>\n<li><span id=\"keyword\">first</span></li>\n<li><span id=\"keyword\">last</span></li>\n<li><span id=\"keyword\">max</span></li>\n<li><span id=\"keyword\">min</span></li>\n<li><span id=\"keyword\">sum</span></li>\n</ul>"
+  },
+  {
+    "q": "<h3>What is a self-join? Provide an example of when you might use one</h3>",
+    "a": "<p>A self-join is an <span id=\"keyword\">inner join</span> of a table with itself. In a table containing employee ID, Name, and the employee ID of the record’s supervisor, a self-join will show each employee’s record side-by-side with the record of their respective managers. A self-join might look like this: </p>\n<p><span id=\"keyword\">select</span> * <span id=\"keyword\">from</span> employees e1 <span id=\"keyword\">inner join</span> employees e2 <span id=\"keyword\">on</span> e1.id = e2.manager_id; </p>"
+  }
+]

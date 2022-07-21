@@ -1,0 +1,186 @@
+[
+  {
+    "q": "<h1>Describe the data flow of a request/response operation within a Spring MVC application</h1>",
+    "a": "<img src=\"https://raw.githubusercontent.com/jsparks9/cards/main/images/mvc.jpg\" alt=\"Spring MVC\">"
+  },
+  {
+    "q": "<h1>Describe the purpose of the Spring framework.</h1>",
+    "a": "<p>\nThe Spring Framework is an application framework and inversion of control container for the Java platform. One of the core functions of the Spring Framework is dependency injection, which is accomplished through the use of a inversion of control container, known as the ApplicationContext.\n</p>"
+  },
+  {
+    "q": "<h1>What version of Spring are you comfortable working with? Do you know the latest major version released?</h1>",
+    "a": "<p>\nDuring projects, we used Spring Boot 2.5.8, which was released in January 2022. \n</p>\n<p>\nSpring 5 was released in Oct 2017, and Spring Boot 2 was released Mar 2018. These are the latest major versions as of July 2022.\n</p>"
+  },
+  {
+    "q": "<h1>What is dependency injection?</h1>",
+    "a": "<p>\nDependency injection is a technique whereby one object supplies the dependencies of another object. A dependency is an object is used as part of the operation of another object. Dependencies can be either mandatory or optional.\n</p>"
+  },
+  {
+    "q": "<h1>What is inversion of control?</h1>",
+    "a": "<ul>\n<li>the concept of the Spring Framework managing beans and performing dependency injection</li>\n<li>developers hand over control over aspects of the application to the Spring Framework</li>\n</ul>"
+  },
+  {
+    "q": "<h1>How is dependency injection achieved within the Spring framework?</h1>",
+    "a": "<p>\nThrough Spring Framework's ApplicationContext\n</p>\n<p>\nThe Spring Framework's ApplicationContext is an inversion of control container, also known as the bean container. This container is responsible for managing the lifecycle of all beans contained within it and providing them to the application code when requested.\n</p>"
+  },
+  {
+    "q": "<h1>What is the primary IOC container in Spring?</h1>",
+    "a": "<p>\nBeanFactory (this is extended by ApplicationContext)\n</p>"
+  },
+  {
+    "q": "<h1>What are some differences between the ApplicationContext and the BeanFactory in Spring?</h1>",
+    "a": "<p>\nApplicationContext extends BeanFactory, thus gaining additional functionality. \n</p>\n<table><thead><tr><th><p style=\"text-align:center\">BeanFactory</p></th><th><p style=\"text-align:center\">ApplicationContext</p></th></tr></thead><tbody><tr><td>It is a fundamental container that provides the basic functionality for managing beans.</td><td>It is an advanced container that extends the BeanFactory that provides all basic functionality and adds some advanced features.</td></tr><tr><td>It is suitable to build standalone applications.</td><td>It is suitable to build Web applications, integration with AOP modules, ORM and distributed applications.</td></tr><tr><td>It supports only Singleton and Prototype bean scopes.</td><td>It supports all types of bean scopes such as Singleton, Prototype, Request, Session etc.</td></tr><tr><td>It does not support Annotations. In Bean Autowiring, we need to configure the properties in XML file only.</td><td>It supports Annotation based configuration in Bean Autowiring.</td></tr><tr><td>This interface does not provides messaging (i18n or internationalization) functionality.</td><td>ApplicationContext interface extends MessageSource interface, thus it provides messaging (i18n or internationalization) functionality.</td></tr><tr><td>BeanFactory does not support Event publication functionality.</td><td>Event handling in the ApplicationContext is provided through the ApplicationEvent class and ApplicationListener interface.</td></tr><tr><td>In BeanFactory, we need to manually register BeanPostProcessors and BeanFactoryPostProcessors.</td><td>The ApplicationContext automatically registers BeanFactoryPostProcessor and BeanPostProcessor at startup.</td></tr><tr><td>BeanFactory will create a bean object when the getBean() method is called thus making it Lazy initialization.</td><td>ApplicationContext loads all the beans and creates objects at the time of startup only thus making it Eager initialization.</td></tr><tr><td>BeanFactory interface provides basic features only thus requires less memory. For standalone applications where the basic features are enough and when memory consumption is critical, we can use BeanFactory.</td><td>ApplicationContext provides all the basic features and advanced features, including several that are geared towards enterprise applications thus requires more memory.</td></tr></tbody></table>\n<p>(<a target=\"_blank\" href=\"https://www.geeksforgeeks.org/spring-difference-between-beanfactory-and-applicationcontext/\">geeksforgeeks.org</a>)</p>"
+  },
+  {
+    "q": "<h1>Are beans loaded eagerly or lazily within the ApplicationContext? How can you change this?</h1>",
+    "a": "<p>\neagerly; This can be changed with the annotation @Lazy \n</p>"
+  },
+  {
+    "q": "<h1>What are some ways that a bean registry can be provided to Spring?</h1>",
+    "a": "<p>\nXML, annotation, and scan\n</p>"
+  },
+  {
+    "q": "<h1>What is component-scanning in Spring?</h1>",
+    "a": "<p>\nThe @ComponentScan annotation configures component scanning directives for use with @Configuration classes\n</p>\n<p>\nFirstly, @ComponentScan is implied by @SpringBootApplication in the main class of our Spring Boot application. Spring will look for components in the same and child directories as this main class.\n</p>"
+  },
+  {
+    "q": "<h1>What are the Spring stereotype annotations?</h1>",
+    "a": "<ul>\n<li>Component</li>\n<li>Controller</li>\n<li>Indexed</li>\n<li>Repository</li>\n<li>Service</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What is the difference between manual bean wiring and autowiring?</h1>",
+    "a": "<p>\nWe might manually wire beans in an XML configuration file, and this is a tedious process of putting a pointer to each required dependency in different beans. \n</p>\n<p>\nSpring Boot takes an opinionated approach to automatically inject dependencies. We instantiate the required objects in a class and generate a constructor. \n</p>"
+  },
+  {
+    "q": "<h1>What is the standard lifecycle of a bean within the ApplicationContext?</h1>",
+    "a": "<ul>\n<li>Instantiate</li>\n<li>Populate Properties</li>\n<li>BeanNameAware's setBeanName()</li>\n<li>BeanFactoryAware's setBeanFactory()</li>\n<li>ApplicationContectAware's setApplicationContext()</li>\n<li>Preinitialization BeanPostProcessors</li>\n<li>InitializingBean's afterPropertiesSet()</li>\n<li>Call Custom init-method</li>\n<li>Postinitialization BeanPostProcessors</li>\n<li>(Bean is ready to use)</li>\n<li>...</li>\n<li>(Container is shut down)</li>\n<li>DisposableBean's destroy()</li>\n<li>Call Sustom Destroy-method</li>\n</ul>\n<img src=\"https://raw.githubusercontent.com/jsparks9/cards/main/images/bean.png\" alt=\"Spring Bean Lifecycle\">"
+  },
+  {
+    "q": "<h1>What are the scopes of a Spring bean? What is the default?</h1>",
+    "a": "<ul>\n<li>\n<p><strong>singleton</strong> <em>(default)</em></p>\n<ul>\n<li>The Spring Container creates only one instance of the bean</li>\n<li>This bean is cached into memory</li>\n<li>All requests for the bean will return a shared reference to the same bean</li>\n</ul>\n</li>\n<li>\n<p><strong>prototype</strong></p>\n<ul>\n<li>Creates a new bean instance for each container request</li>\n</ul>\n</li>\n<li>\n<p><strong>request</strong></p>\n<ul>\n<li>Bean is scoped to an HTTP web request</li>\n<li>Only used in web applications</li>\n</ul>\n</li>\n<li>\n<p><strong>session</strong></p>\n<ul>\n<li>Bean is scoped to an HTTP web session</li>\n<li>Only used in web applications</li>\n</ul>\n</li>\n<li>\n<p><strong>application</strong></p>\n<ul>\n<li>Scopes a single bean definition to the lifecycle of a <code>ServletContext</code></li>\n<li>Only used in web applications</li>\n</ul>\n</li>\n<li>\n<p><strong>websocket</strong></p>\n<ul>\n<li>Scopes a single bean definition to the lifecycle of a <code>WebSocket</code></li>\n<li>Only used in web applications</li>\n</ul>\n</li>\n</ul>"
+  },
+  {
+    "q": "<h1>List some Spring MVC annotations</h1>",
+    "a": "<ul>\n<li>\n@Controller\n</li>\n<li>\n@RequestMapping\n</li>\n<li>\n@GetMapping\n</li>\n<li>\n@PostMapping\n</li>\n<li>\n@PutMapping\n</li>\n<li>\n@DeleteMapping\n</li>\n<li>\n@PathVariable\n</li>\n<li>\n@RequestParam\n</li>\n<li>\n@RequestBody\n</li>\n<li>\n@ResponseBody\n</li>\n<li>\n@ResponseStatus\n</li>\n<li>\n@ExceptionHandler\n</li>\n<li>\n@RestController\n</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What is the difference between @RestController and @Controller?</h1>",
+    "a": "<p>\n@RestController is used when creating RESTful APIs using Spring MVC. It is an aggregate annotation that implies @Controller on the class level and @ResponseBody on each controller method\n</p>\n<p>\n@Controller is a Spring stereotype annotation that is put at the class level for a presentation-layer class whose methods expose web endpoints.\n</p>"
+  },
+  {
+    "q": "<h1>What is the difference between @RequestBody and @ResponseBody?</h1>",
+    "a": "<p>\n@RequestBody is used to grab a object from the body of the web request\n</p>\n<p>\n@ResponseBody is used to indicate that the returned value of the controller method will be placed within the body of the web response\n</p>"
+  },
+  {
+    "q": "<h1>What are the autowiring modes Spring uses to resolve autowired dependencies?</h1>",
+    "a": "<ul>\n<li>\n<p><strong>no</strong> <em>(default)</em></p>\n<ul>\n<li>no autowiring. Bean references must be defined by ref elements</li>\n</ul>\n</li>\n<li>\n<p><strong>byType</strong></p>\n<ul>\n<li>lets a property be autowired if exactly one bean of the property type exists in the container</li>\n<li>if more than one exists, a fatal exception is thrown, which indicates that you may not use byType autowiring for that bean</li>\n<li>if there are no matching beans, nothing happens (the property is not set)</li>\n</ul>\n</li>\n<li>\n<p><strong>byName</strong></p>\n<ul>\n<li>autowiring by property name. Spring looks for a bean with the same name as the property that needs to be autowired</li>\n</ul>\n</li>\n<li>\n<p><strong>constructor</strong></p>\n<ul>\n<li>analogous to byType but applies to constructor arguments</li>\n<li>if there is not exactly one bean of the constructor argument type in the container, a fatal error is raised.</li>\n</ul>\n</li>\n<li>\n<p><strong><code>@Qualifier</code></strong></p>\n<ul>\n<li>Spring-managed classes can be annotated with <code>@Qualifier</code> which can be passed a String as an argument. This String value will be used as an identifier, and allows for the use of the qualifier annotation in conjuction with setter injection to locate the appropriate bean to wire in (Note that the use of <code>@Qualifier</code> with constructor injection is not supported).</li>\n</ul>\n</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What are forms of dependency injection supported by Spring?</h1>",
+    "a": "<ul>\n<li>Constructor-Based</li>\n<li>Setter-Based</li>\n<li>Field-Level</li>\n</ul>"
+  },
+  {
+    "q": "<h1>If using Java-class configuration, what is the default name given to a bean? How can you change this?</h1>",
+    "a": "<p>\nThe default name is the class name; @Bean(name = \"customName\")\n</p>"
+  },
+  {
+    "q": "<h1>If using component-scanning, what is the default name given to a bean? How can you change this?</h1>",
+    "a": "<p>\nWith annotation, the default name is the short name of the class. @Qualifier(\"customName\") above the class.\n</p>"
+  },
+  {
+    "q": "<h1>How can you provide a scalar or literal value for injection into the property of a Spring bean?</h1>",
+    "a": "<ul>\n<li>\n<bean id=\"javaProperties\" class=\"JavaProperties\" />\n</li>\n<li>\n@Value(\"${jwt.secret}\") above a field with application.yml containing jwt: secret: the-value\n</li>\n<li>\n@Value(\"#{24 * 60 * 60 * 1000}\") above a field\n</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What is AOP?</h1>",
+    "a": "<p>\nThe Spring Framework has its own Aspect-Oriented Programming framework, which is based on AspectJ. Aspect-oriented Programming (AOP) complements Object-oriented Programming (OOP) by providing another way of thinking about program structure. The key unit of modularity in OOP is the class, whereas in AOP the unit of modularity is the aspect. Aspects enable the modularization of concerns (such as transaction management, logging, security, etc.) that cut across multiple types and objects. (Such concerns are often termed \"cross-cutting\" concerns in AOP literature.)\n</p>"
+  },
+  {
+    "q": "<h1>What are cross-cutting concerns? Provide examples</h1>",
+    "a": "<p>\nconcerns that cut across multiple types and objects (such as transaction management, logging, security, etc.) \n</p>"
+  },
+  {
+    "q": "<h1>What is an aspect?</h1>",
+    "a": "<p>\nA modularization of a concern that cuts across multiple classes. Transaction management is a good example of a crosscutting concern in enterprise Java applications. In Spring AOP, aspects are implemented by using regular classes (the schema-based approach) or regular classes annotated with the @Aspect annotation (the AspectJ style).\n</p>"
+  },
+  {
+    "q": "<h1>What is the difference between a join point and a pointcut?</h1>",
+    "a": "<p>\na join point is a point during the execution of a program, such as the execution of a method or the handling of an exception. In Spring AOP, a join point always represents a method execution.\n</p>\n<p>\na pointcut is a predicate that matches join points. Advice is associated with a pointcut expression and runs at any join point matched by the pointcut (for example, the execution of a method with a certain name). The concept of join points as matched by pointcut expressions is central to AOP, and Spring uses the AspectJ pointcut expression language by default.\n</p>"
+  },
+  {
+    "q": "<h1>What is aspect weaving?</h1>",
+    "a": "<p>\nlinking aspects with other application types or objects to create an advised object. This can be done at compile time (using the AspectJ compiler, for example), load time, or at runtime. Spring AOP, like other pure Java AOP frameworks, performs weaving at runtime.\n</p>"
+  },
+  {
+    "q": "<h1>What are some different types of aspect weaving?</h1>",
+    "a": "<ul>\n<li>\ncompile-time\n</li>\n<li>\nload-time\n</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What type of aspect weaving is supported by Spring AOP?</h1>",
+    "a": "<p>\nonly runtime\n</p>"
+  },
+  {
+    "q": "<h1>What is advice? List the types of advice supported by Spring AOP</h1>",
+    "a": "<p>\nAction taken by an aspect at a particular join point. Many AOP frameworks, including Spring, model an advice as an interceptor and maintain a chain of interceptors around the join point.\n</p>\n<ul>\n<li>\n@Before\n</li>\n<li>\n@AfterReturning\n</li>\n<li>\n@AfterThrowing\n</li>\n<li>\n@After\n</li>\n<li>\n@Around\n</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What is considered to be the most powerful type of advice? Why?</h1>",
+    "a": "<p>\n\n</p>"
+  },
+  {
+    "q": "<h1>Can you prevent the execution of a join point when using before advice?</h1>",
+    "a": "<p>\nAround advice is advice that surrounds a join point such as a method invocation. This is the most powerful kind of advice. Around advice can perform custom behavior before and after the method invocation. It is also responsible for choosing whether to proceed to the join point or to shortcut the advised method execution by returning its own return value or throwing an exception.\n</p>"
+  },
+  {
+    "q": "<h1>What is AspectJ? How is it enabled for use within a Spring application?</h1>",
+    "a": "<p>\n@AspectJ refers to a style of declaring aspects as regular Java classes annotated with annotations. In the main class, use @EnableAspectJAutoProxy\n</p>"
+  },
+  {
+    "q": "<h1>What is the JoinPoint argument used for? What is a ProceedingJoinPoint? When is it used?</h1>",
+    "a": "<p>\nProceedingJoinPoint is a subclass of JoinPoint. JoinPoint is an AspectJ interface that provides reflective access to the state available at a given join point, like method parameters, return value, or thrown exception. It also provides all static information about the method itself.\n</p>\n<p>\nProceedingJoinPoint is an extension of the JoinPoint that exposes the additional proceed() method. When invoked, the code execution jumps to the next advice or to the target method. It gives us the power to control the code flow and decide whether to proceed or not with further invocations. It can be just with the @Around advice, which surrounds the whole method invocation.\n</p>\n<p>(<a target=\"_blank\" href=\"https://www.baeldung.com/aspectj-joinpoint-proceedingjoinpoint\">baeldung.com</a>)</p>"
+  },
+  {
+    "q": "<h1>What is Spring MVC? How is it enabled for use within a Spring application?</h1>",
+    "a": "<p>\nSpring Web MVC is a model-view-controller web framework built on the Servlet API. This framework is useful for creating flexible web applications to handle HTTP requests from clients.\n</p>\n<p>\nIt can be enabled through XML configuration or using WebApplicationInitializer (@EnableWebMvc, implement WebApplicationInitializer, and other steps)\n</p>"
+  },
+  {
+    "q": "<h1>What is the difference between @RequestParam and @PathVariable?</h1>",
+    "a": "<p>\n@RequestParam is used to grab a variable that is defined as a query parameter within the URI\n</p>\n<p>\n@PathVariable is used to grab a variable that is a part of the URI path\n</p>"
+  },
+  {
+    "q": "<h1>If you annotate a method with @ResponseStatus but do not provide a HttpStatus enum, what is the default?</h1>",
+    "a": "<p>\n\"Internal Server Error\" (code 500)\n</p>"
+  },
+  {
+    "q": "<h1>What is the DispatcherServlet and what is it used for?</h1>",
+    "a": "<p>\nThe Spring MVC web framework is designed around the front controller pattern where a central servlet, the DispatcherServlet, provides a shared algorithm for request processing, while actual work is performed by configurable delegate components. This model is flexible and supports diverse workflows.\n</p>"
+  },
+  {
+    "q": "<h1>What is an exception handler? How would you declare one for use within a controller?</h1>",
+    "a": "<p>\nSpring MVC contains a special bean type, HandlerExceptionResolver, that strategizes to resolve exceptions, mapping them to handlers, to HTML error views, or other targets.\n</p>"
+  },
+  {
+    "q": "<h1>How would you configure contextual sessions between Spring and Hibernate?</h1>",
+    "a": "<p>\nUse the application.yml or application-anything.yml for a specific Spring profile (here, it's \"anything\")\n</p>"
+  },
+  {
+    "q": "<h1>What information is provided to the configuration of the DataSource bean within Spring ORM?</h1>",
+    "a": "<p>\ndriverClassName, url, username, and password for the database\n</p>"
+  },
+  {
+    "q": "<h1>What information is provided to the configuration of the SessionFactory bean within Spring ORM?</h1>",
+    "a": "<p>\ndataSource, packagesToScan, hibernateProperties (dialect, show_sql, formal_sql)\n</p>"
+  },
+  {
+    "q": "<h1>What is the purpose of @Transactional? Where should this annotation be placed? How is its use enabled?</h1>",
+    "a": "<p>\n@Transactional indicates that a persistence method takes place in a transactional context (i.e. on service-layer methods). This annotations allows for declarative transaction management, namely the isolation and propagation levels of the transaction.\n</p>\n<p>\nThis annotation may be placed above Repo methods (for example, in a class that extends JpaRepository). \n</p>"
+  },
+  {
+    "q": "<h1>What are transaction propagation levels in Spring ORM?</h1>",
+    "a": "<ul>\n<li>REQUIRED</li>\n<li>REQUIRES_NEW</li>\n<li>NESTED</li>\n<li>MANDATORY</li>\n<li>NEVER</li>\n<li>NOT_SUPPORTED</li>\n<li>SUPPORTS</li>\n</ul>"
+  },
+  {
+    "q": "<h1>What is the purpose of the RestTemplate class within Spring?</h1>",
+    "a": "<p>\nRest Template is used to create applications that consume RESTful Web Services.\n</p>\n<p>(<a target=\"_blank\" href=\"https://www.tutorialspoint.com/spring_boot/spring_boot_rest_template.htm\">tutorialspoint.com</a>)</p>"
+  }
+]
