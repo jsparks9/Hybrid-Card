@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url('../src/images/javascript.jpg');
+  background-image: url('https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/images/javascript.jpg');
   background-repeat: no-repeat;
   background-color: rgb(121, 80, 48);
 }
