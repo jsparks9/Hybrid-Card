@@ -1,7 +1,6 @@
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import "./styles.css";
-import tapOrClick from 'react-tap-or-click'
 
 interface Card {
   q: string;
@@ -281,12 +280,11 @@ export default function App() {
       
       <span>
         <div id="q_control" 
-          {...tapOrClick(q_tap)}
-          // onMouseDown={q_m_down}
+          onMouseDown={q_m_down}
           // onTouchStart={q_m_down}
-          // onMouseUp={q_m_up}
+          onMouseUp={q_m_up}
           // onTouchEnd={q_m_up}
-          // onMouseMove={q_m_move}
+          onMouseMove={q_m_move}
           // onTouchMove={q_m_move}
         >
         <p id="question" dangerouslySetInnerHTML={{__html: displayCard.q}}></p>
@@ -295,10 +293,9 @@ export default function App() {
 
       <span>
         <div id="a_control"
-        {...tapOrClick(a_tap)}
-        // onMouseDown={a_m_down}
+        onMouseDown={a_m_down}
         // onTouchStart={a_m_down}
-        // onMouseUp={a_m_up}
+        onMouseUp={a_m_up}
         // onTouchEnd={a_m_up}
         // onMouseMove={a_m_move}
         >
