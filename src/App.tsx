@@ -205,6 +205,16 @@ export default function App() {
     if (qm_down) { qm_moved = true;
     }
   }
+
+  const q_tap = () => {
+    setShowA(false);
+    getNextCard();
+  }
+
+  const a_tap = () => {
+    setShowA(true)
+  }
+
   const q_m_up = (e:SyntheticEvent) => {
     console.log("click up");
     if (true || !qm_moved) {
@@ -267,8 +277,11 @@ export default function App() {
       <span>
         <div id="q_control" 
           onMouseDown={q_m_down}
+          onTouchStart={q_m_down}
           onMouseUp={q_m_up}
+          onTouchEnd={q_m_up}
           onMouseMove={q_m_move}
+          onTouchMove={q_m_move}
         >
         <p id="question" dangerouslySetInnerHTML={{__html: displayCard.q}}></p>
         </div>
@@ -277,7 +290,9 @@ export default function App() {
       <span>
         <div id="a_control"
         onMouseDown={a_m_down}
+        onTouchStart={a_m_down}
         onMouseUp={a_m_up}
+        onTouchEnd={a_m_up}
         // onMouseMove={a_m_move}
         >
         <p id="answer" dangerouslySetInnerHTML={{__html: (showA)?displayCard.a:default_a}}></p>
