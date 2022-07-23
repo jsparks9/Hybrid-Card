@@ -1,6 +1,7 @@
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import "./styles.css";
+import tapOrClick from 'react-tap-or-click'
 
 interface Card {
   q: string;
@@ -47,6 +48,10 @@ export default function App() {
       setDeckSelection(currentSel);
     }
   };
+
+  useEffect(() => {
+    handleDeckSelection(Object, [decks[Math.floor(Math.random() * decks.length)]])
+  }, []);
 
   useEffect(() => {
     console.log("deckSelection changed. current selection is " + deckSelection);
@@ -276,12 +281,13 @@ export default function App() {
       
       <span>
         <div id="q_control" 
-          onMouseDown={q_m_down}
-          onTouchStart={q_m_down}
-          onMouseUp={q_m_up}
-          onTouchEnd={q_m_up}
-          onMouseMove={q_m_move}
-          onTouchMove={q_m_move}
+          {...tapOrClick(q_tap)}
+          // onMouseDown={q_m_down}
+          // onTouchStart={q_m_down}
+          // onMouseUp={q_m_up}
+          // onTouchEnd={q_m_up}
+          // onMouseMove={q_m_move}
+          // onTouchMove={q_m_move}
         >
         <p id="question" dangerouslySetInnerHTML={{__html: displayCard.q}}></p>
         </div>
@@ -289,10 +295,11 @@ export default function App() {
 
       <span>
         <div id="a_control"
-        onMouseDown={a_m_down}
-        onTouchStart={a_m_down}
-        onMouseUp={a_m_up}
-        onTouchEnd={a_m_up}
+        {...tapOrClick(a_tap)}
+        // onMouseDown={a_m_down}
+        // onTouchStart={a_m_down}
+        // onMouseUp={a_m_up}
+        // onTouchEnd={a_m_up}
         // onMouseMove={a_m_move}
         >
         <p id="answer" dangerouslySetInnerHTML={{__html: (showA)?displayCard.a:default_a}}></p>
