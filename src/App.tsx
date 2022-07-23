@@ -123,23 +123,6 @@ export default function App() {
     setLoadedDecks([...loadedDecks, deck]);
   }
 
-  // useEffect(() => {
-  //   console.log(loadedDecks);
-  //   console.log("length: " + loadedDecks.length)
-  // }, [loadedDecks])
-
-  // useEffect(() => { 
-  //   if(!hasSent ) { // !loadedDecks prevents additional fetches during development
-  //     hasSent = true; // prevents double request
-  //     console.log("Page loaded. Calling load(0)");
-  //     load(0); 
-  //     setLoadedDeckInds([0]);
-  //     setCurrentDeckInds([0]);
-  //     // setDeckSelection([decks[0]]);
-  //     //hasSent = false; // not sure about this
-  //   }
-  // }, []); // loads first deck
-
   const getNextCard = () => {
     console.log("getting next card");
     console.log("currentCards.length=" + currentCards.length);
@@ -202,7 +185,7 @@ export default function App() {
       setDisplayCard(currentCards[rnum]);
     }
     else {
-      setDisplayCard({q:"<h1>Please select a deck first</h1>", a:"<h1></h1>"} as Card);
+      setDisplayCard({q:"<h3>Please select a deck first</h3>", a:"<h3></h3>"} as Card);
     }
     console.log(currentCards);
 
@@ -266,20 +249,12 @@ export default function App() {
   return (
 
     <div className="App">
-      {/* <header>
-        <ul>
-          {decks.map((n) => <li key={n}>
-          <a href="#">
-            {n}</a></li>)}
-        </ul>
-      </header> */}
       <header>
         <ToggleButtonGroup
         orientation="horizontal"
         value={deckSelection}
         onChange={handleDeckSelection}
         style={{backgroundColor:"#D4B37F"}}
-        // aria-label="device"
       >
         {decks.map((n) =>
         <ToggleButton key={n} value={n} aria-label={n}>

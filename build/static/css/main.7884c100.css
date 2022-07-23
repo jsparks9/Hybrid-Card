@@ -1,15 +1,8 @@
-body{
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    margin:0
-}
-code{
-    font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
-}
 *{
     box-sizing:border-box;
-    font-family:sans-serif
+    font-family:sans-serif;
+    -webkit-user-select:none;
+    user-select:none
 }
 body{
     background-color:#795030;
@@ -21,7 +14,7 @@ header li{
     list-style:none
 }
 header :link,header :visited{
-    background-color:#C7A26B;
+    background-color:#c7a26b;
     border:1px solid #80532d;
     color:sky-blue;
     margin:3px;
@@ -30,24 +23,21 @@ header :link,header :visited{
     width:400px
 }
 #current_page a:link,#current_page a:visited{
-    background-color:#C7A26B;
-    color:#C7A26B
+    background-color:#00bfff;
+    color:ivory
 }
 #a_control,#q_control{
     word-wrap:normal;
-    background-color:#C7A26B;
+    background-color:#c7a26b;
     border:2px solid #80532d;
     float:left;
     margin-top:5px;
-    max-width:500px;
-    min-height:300px;
     opacity:90%;
     padding:10px;
-    width:50%;
     word-break:normal
 }
-#a_control{
-    margin-left:3px
+#q_control{
+    margin-right:3px
 }
 #answer,#question{
     color:#f0fff0;
@@ -59,4 +49,15 @@ header :link,header :visited{
 #keyword,h3{
     font-weight:700
 }
-/*# sourceMappingURL=main.404d6986.css.map*/
+@media only screen and (min-width:0em) and (max-width:36.4375em){
+    #a_control,#q_control{
+        width:100%
+    }
+}
+@media only screen and (min-width:36.4375001em){
+    #a_control,#q_control{
+        min-height:18.75em;
+        width:31.25em
+    }
+}
+/*# sourceMappingURL=main.7884c100.css.map*/
