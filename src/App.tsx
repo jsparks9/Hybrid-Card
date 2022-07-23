@@ -1,11 +1,6 @@
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import "./styles.css";
-// import { Card, Button, Typography } from "@mui/material";
-// import Draggable from "react-draggable";
-// import Stack from '@mui/material/Stack';
-// import ToggleButton from '@mui/material/ToggleButton';
-// import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 interface Card {
   q: string;
@@ -84,7 +79,7 @@ export default function App() {
     // while(currentDeckInds.length != loadedDecks.length) {
     //   console.log("Not equal");
     // }
-    console.log("debug: "+currentDeckInds.length + " " + loadedDecks.length);
+    console.log("debug: "+currentDeckInds.length + " should equal " + loadedDecks.length);
     for (let i of currentDeckInds) { // for each currentDeckInd selected by user, 
       for (let d of loadedDecks) {
         if (d.idx === i) {
@@ -122,7 +117,7 @@ export default function App() {
   }
 
   function injectDeck(ind:number, data:any) {
-    let deck:Deck = {idx:ind,cards:data as unknown as Card[], memory:[], memlen:0} as Deck;
+    let deck:Deck = {idx:ind, cards:data as unknown as Card[], memory:[], memlen:0} as Deck;
     deck.memlen = Math.floor(deck.cards.length / 2);
     console.log("setting loaded decks with response");
     setLoadedDecks([...loadedDecks, deck]);
@@ -191,8 +186,8 @@ export default function App() {
           if (d.idx === deck_ind[i]) {
             // console.log("Adding to mem of deck with first card: " + d.cards[0].q)
             console.log("pushing "+(rnum-last_deck_len)+" to mem of Deck " + decks[d.idx] + " that has "+d.cards.length+" cards");
-            d.memory.push(rnum-last_deck_len);
-            if (d.memory.length > d.memlen) {d.memory.shift()}
+            d.memory.push(rnum - last_deck_len); // gets the appropriate index in the right deck
+            if (d.memory.length > d.memlen) {d.memory.shift()} // remove element if new len exceeds max memory length
             // console.log("mem now: "+ d.memory);
             break;
             
@@ -283,7 +278,7 @@ export default function App() {
         orientation="horizontal"
         value={deckSelection}
         onChange={handleDeckSelection}
-        style={{backgroundColor:"ivory"}}
+        style={{backgroundColor:"#D4B37F"}}
         // aria-label="device"
       >
         {decks.map((n) =>
@@ -295,7 +290,7 @@ export default function App() {
       </header>
       
       <span>
-        <div id="q_control" type="button" 
+        <div id="q_control" 
           onMouseDown={q_m_down}
           onMouseUp={q_m_up}
           onMouseMove={q_m_move}
@@ -305,7 +300,7 @@ export default function App() {
       </span>
 
       <span>
-        <div id="a_control" type="button" 
+        <div id="a_control"
         onMouseDown={a_m_down}
         onMouseUp={a_m_up}
         // onMouseMove={a_m_move}
@@ -316,5 +311,3 @@ export default function App() {
     </div>
   );
 }
-
-
