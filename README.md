@@ -10,8 +10,8 @@ In comparison to other platforms, this app has customizations making it ideal fo
 </div>
 
 ### Screenshots
-![React Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Car/main/imgs/sc1.png)
-![Spring Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Car/main/imgs/sc2.png)
+![React Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc1.png)
+![Spring Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc2.png)
 
 
 ### Features
