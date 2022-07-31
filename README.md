@@ -22,7 +22,7 @@ In comparison to other platforms, this app has customizations making it ideal fo
 
 ### Mobile Support
 <kbd>
-<img src="https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc3.png" style='border: 2px solid #80532d;' alt="Mobile Support">
+<img src="https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc3.png" height="600" style='border: 2px solid #80532d;' alt="Mobile Support">
 </kbd>
 
 ## Features
