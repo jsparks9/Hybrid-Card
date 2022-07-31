@@ -10,9 +10,14 @@ In comparison to other platforms, this app has customizations making it ideal fo
 </div>
 
 ### Screenshots
+##### React Deck
 ![React Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc1.png)
+
+##### Spring MVC
 ![Spring Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc2.png)
 
+##### Mobile Support
+![Mobile Support](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc3.png)
 
 ### Features
 - Renders HTML tables, lists, and images as a part of the questions and answers
