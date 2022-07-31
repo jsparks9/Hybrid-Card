@@ -6,7 +6,7 @@ In comparison to other platforms, this app has customizations making it ideal fo
 
 ## Deployed App Link
 <div>
-<a href="https://jsparks9.github.io/Hybrid-Card/build/index" target="_blank">Link to App (opens in new tab)</a>
+<a href="https://jsparks9.github.io/Hybrid-Card/build/index" target="_blank">https://jsparks9.github.io/Hybrid-Card/build/index</a>
 </div>
 
 ## Screenshots
