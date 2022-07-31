@@ -4,22 +4,28 @@
 ### Summary and Motivation
 In comparison to other platforms, this app has customizations making it ideal for learning commonly-asked interview questions. This app is lightweight, aesthetic, customized, and specific to our technologies. 
 
-### Deployed App Link
+## Deployed App Link
 <div>
 <a href="https://jsparks9.github.io/Hybrid-Card/build/index" target="_blank">https://jsparks9.github.io/Hybrid-Card/build/index (opens in new tab)</a>
 </div>
 
-### Screenshots
-##### React Deck
-![React Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc1.png)
+## Screenshots
+### React Deck
+<kbd>
+<img src="https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc1.png" style='border: 2px solid #80532d;' alt="React Deck">
+</kbd>
 
-##### Spring MVC
-![Spring Deck](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc2.png)
+### Spring MVC
+<kbd>
+<img src="https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc2.png" style='border: 2px solid #80532d;' alt="Spring Deck">
+</kbd>
 
-##### Mobile Support
-![Mobile Support](https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc3.png)
+### Mobile Support
+<kbd>
+<img src="https://raw.githubusercontent.com/jsparks9/Hybrid-Card/main/imgs/sc3.png" style='border: 2px solid #80532d;' alt="Mobile Support">
+</kbd>
 
-### Features
+## Features
 - Renders HTML tables, lists, and images as a part of the questions and answers
 - Allows for multiple decks to be selected
 - Randomly selects the next card from the selected decks
@@ -28,16 +34,16 @@ In comparison to other platforms, this app has customizations making it ideal fo
 - On page load, randomly sets the deck selection
 - @Media CSS enables mobile-friendly rendering
 
-### Design Alternatives and Potential Issues
+## Design Alternatives and Potential Issues
 
 - There's a lot of room for change in terms of how cards are remembered and randomized
 - Rapid click selection in the selection menu might silently fail to load a deck
 - Memory-based random selection process has room for optimization
 
-### Technologies 
+## Technologies 
 This app was originally a plain HTML-JS-CSS page and was migrated to ReactJS for further development. It is a single page application (SPA) built in ReactJS using TypeScript. 
 
-### Deployment
+## Deployment
 After ensuring you have Node Package Manager (NPM) installed, run Bash in the same directory as the package.json and ReadMe files. Then run the following Bash command.
 ```sh
 npm build
