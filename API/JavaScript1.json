@@ -1,0 +1,158 @@
+[
+  {
+    "q": "<h3>\nWhat are some ways you can use functions in JS?\n</h3>",
+    "a": "<p>\nAt a basic level, functions can be used to handle events in the webpage by rendering or derendering content. \n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is JavaScript? What do we use it for?\n</h3>",
+    "a": "<ul>\n<li>\nJavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.\n</li>\n<li>\nJavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.\n</li>\n<li>\nWhile it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. \n</li>\n</ul>\n\n<p>(<a target=\"_blank\" \nhref=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript\">\nmozilla.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nCan we run JavaScript in a web browser, on a server, or both?\n</h3>",
+    "a": "<p>\nEither or both.\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat are the benefits of JS over your core language? Drawbacks?\n</h3>",
+    "a": "<p>\nBenefits of JavaScript\n</p>\n\n<ul>\n<li>\nThe biggest advantage to JavaScript having a ability to support all modern browsers and produce an equivalent result.\n</li>\n<li>\nRegardless of where you host JavaScript, it always gets executed on client environment to save lots of a bandwidth and make execution process fast.\n</li>\n</ul>\n\n<p>\nDisbenefits of JavaScript\n</p>\n\n<ul>\n<li>\nThe main problem or disadvantage in JavaScript is that the code is always visible to everyone anyone can view JavaScript code.\n</li>\n<li>\nNo matter what proportion fast JavaScript interpret, JavaScript DOM (Document Object Model) is slow and can be a never fast rendering with HTML.\n</li>\n</ul>\n\n<p>(<a target=\"_blank\" \nhref=\"https://www.geeksforgeeks.org/advantages-and-disadvantages-of-javascript/\">\ngeeksforgeeks.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat programming paradigm(s) does JS support?\n</h3>",
+    "a": "<p>\nModern programming languages fall into two categories: imperative (also called procedural) and declarative (also called functional). JavaScript supports both.\n</p>\n<img style=\"max-width:500px;\"\nsrc=\"https://raw.githubusercontent.com/jsparks9/cards/main/images/js-multi-paradigm.png\" alt=\"multi-paradigm-chart\">\n<p>(<a target=\"_blank\" \nhref=\"https://javascript.plainenglish.io/what-are-javascript-programming-paradigms-3ef0f576dfdb\">\nplainenglish.io\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat are the data types in JS?\n</h3>",
+    "a": "<p>\nThe set of types in the JavaScript language consists of primitive values and objects.\n</p>\n<p>\nObjects (collections of properties)\n</p>\n<p>\nPrimitive values (immutable datum represented directly at the lowest level of the language)\n</p>\n\n<ul>\n<li>\nBoolean\n</li>\n<li>\nNull\n</li>\n<li>\nUndefined\n</li>\n<li>\nNumber\n</li>\n<li>\nBigint\n</li>\n<li>\nString\n</li>\n<li>\nSymbol\n</li>\n</ul>"
+  },
+  {
+    "q": "<h3>\n<ul>\n<li>\nWhat is the type of NaN? What is the isNaN function?\n</li>\n<li>\nWhat is the data type of a function?\n</li>\n<li>\nWhat about an array?\n</li>\n<li>\nWhat is the difference between undefined and null?\n</li>\n</ul>\n</h3>",
+    "a": "<p>\ntypeof(NaN) === \"number\"\n</p>\n<p>\nUnlike all other possible values in JavaScript, it is not possible to use the equality operators (== and ===) to compare a value against NaN to determine whether the value is NaN or not, because both NaN == NaN and NaN === NaN evaluate to false. The isNaN() function provides a convenient equality check against NaN.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN\">\nmozilla.org\n</a>)</p>\n<ul>\n<li>\nfunction abcd() {} ;\n</li>\n<li>\ntypeof(abcd) === \"function\"; // true\n</li>\n<li>\ntypeof(function() {}) === \"function\"; // true\n</li>\n<li>\ntypeof([]) === \"object\"; // true\n</li>\n</ul>\n<p>\nWhen a variable is declared but not assigned to any value, the variable by default is assigned a value of undefined.\n</p>\n<p>\nOn the other hand, null is an object. It can be assigned to a variable as a representation of no value. JavaScript never sets a value to null. That must be done programmatically.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://flexiple.com/undefined-vs-null-javascript/\">\nflexiple.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat are JS objects? what is the syntax?\n</h3>",
+    "a": "<p>\nIn JavaScript, objects can be seen as a collection of properties. With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String value or a Symbol value.\n</p>\n<p>\nconst exampleObject1 = {type:\"Value1\", description:\"this is an object\"}; \n</p>\n<p>\nlet exampleObject2 = {}; \n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures\">\nmozilla.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nUse the object literal syntax to create an object with some properties\n</h3>",
+    "a": "<p>\nan object literal is a list of name-value pairs comma-separated inside of curly braces. Those values can be properties and functions.\n</p>\n<p>\nconst exampleObject1 = {type:\"Value1\", description:\"this is an object\", exampleMethod: function() {return null;}}; \n</p>"
+  },
+  {
+    "q": "<h3>\nWhat are arrays in JS? can you change their size?\n</h3>",
+    "a": "<p>\nIn JavaScript, array is a single variable that is used to store different elements.\n</p>\n<p>\nlet exampleArray1=[]; let exampleArray2=new Array();\n</p>\n<p>\nArrays are automatically resized with .pop() or .push() \n</p>"
+  },
+  {
+    "q": "<h3>\nList some array methods and explain how they work.\n</h3>",
+    "a": "<table style=\"border: 1px solid;\">\n  <tbody style=\"border: 1px solid;\"><tr>\n    <th>Name</th>\n    <th>Description</th>\n  </tr>\n  <tr>\n    <td><a href=\"jsref_concat_array.asp\">concat()</a></td>\n    <td>Joins arrays and returns an array with the joined arrays</td>\n  </tr>\n  <tr>\n    <td><a href=\"jsref_constructor_array.asp\">constructor</a></td>\n    <td>Returns the function that created the Array object's prototype</td>\n  </tr>\n  <tr>\n    <td><a href=\"jsref_copywithin.asp\">copyWithin()</a></td>\n    <td>Copies array elements within the array, to and from specified positions</td>\n  </tr>\n  <tr>\n    <td><a href=\"jsref_entries.asp\">entries()</a></td>\n    <td>Returns a key/value pair Array Iteration Object</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_every.asp\">every()</a></td>\n    <td>Checks if every element in an array pass a test</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_fill.asp\">fill()</a></td>\n    <td>Fill the elements in an array with a static value</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_filter.asp\">filter()</a></td>\n    <td>Creates a new array with every element in an array that pass a test</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_find.asp\">find()</a></td>\n    <td>Returns the value of the first element in an array that pass a test</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_findindex.asp\">findIndex()</a></td>\n    <td>Returns the index of the first element in an array that pass a test</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_foreach.asp\">forEach()</a></td>\n    <td>Calls a function for each array element</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_from.asp\">from()</a></td>\n    <td>Creates an array from an object</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_includes_array.asp\">includes()</a></td>\n    <td>Check if an array contains the specified element</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_indexof_array.asp\">indexOf()</a></td>\n    <td>Search the array for an element and returns its position</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_isarray.asp\">isArray()</a></td>\n    <td>Checks whether an object is an array</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_join.asp\">join()</a></td>\n    <td>Joins all elements of an array into a string</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_keys.asp\">keys()</a></td>\n    <td>Returns a Array Iteration Object, containing the keys of the original array</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_lastindexof_array.asp\">lastIndexOf()</a></td>\n    <td>Search the array for an element, starting at the end, and returns its position</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_length_array.asp\">length</a></td>\n    <td>Sets or returns the number of elements in an array</td>\n  </tr>\n    <tr>\n    <td><a href=\"jsref_map.asp\">map()</a></td>\n    <td>Creates a new array with the result of calling a function for each array element</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_pop.asp\">pop()</a></td>\n    <td>Removes the last element of an array, and returns that element</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_prototype_array.asp\">prototype</a></td>\n    <td>Allows you to add properties and methods to an Array object</td>\n  </tr>\n  <tr>\n    <td><a href=\"jsref_push.asp\">push()</a></td>\n    <td>Adds new elements to the end of an array, and returns the new length</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_reduce.asp\">reduce()</a></td>\n    <td>Reduce the values of an array to a single value (going left-to-right)</td>\n    </tr>\n    <tr>\n    <td><a href=\"jsref_reduceright.asp\">reduceRight()</a></td>\n    <td>Reduce the values of an array to a single value (going right-to-left)</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_reverse.asp\">reverse()</a></td>\n    <td>Reverses the order of the elements in an array</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_shift.asp\">shift()</a></td>\n    <td>Removes the first element of an array, and returns that element</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_slice_array.asp\">slice()</a></td>\n    <td>Selects a part of an array, and returns the new array</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_some.asp\">some()</a></td>\n    <td>Checks if any of the elements in an array pass a test</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_sort.asp\">sort()</a></td>\n    <td>Sorts the elements of an array</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_splice.asp\">splice()</a></td>\n    <td>Adds/Removes elements from an array</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_tostring_array.asp\">toString()</a></td>\n    <td>Converts an array to a string, and returns the result</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_unshift.asp\">unshift()</a></td>\n    <td>Adds new elements to the beginning of an array, and returns the new length</td>\n    </tr>\n  <tr>\n    <td><a href=\"jsref_valueof_array.asp\">valueOf()</a></td>\n    <td>Returns the primitive value of an array</td>\n    </tr>\n</tbody></table>\n\n<p>(<a target=\"_blank\" \nhref=\"https://www.w3schools.com/jsref/jsref_obj_array.asp\">\nw3schools.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat is JSON? Is it different from JS objects?\n</h3>",
+    "a": "<ul>\n<li>\nJSON stands for JavaScript Object Notation\n</li><li>\nJSON is a lightweight format for storing and transporting data\n</li><li>\nJSON is often used when data is sent from a server to a web page\n</li><li>\nJSON is \"self-describing\" and easy to understand\n</li>\n</ul>\n<p>(<a target=\"_blank\" \nhref=\"https://www.w3schools.com/whatis/whatis_json.asp\">\nw3schools.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat are the different scopes of variables in JS? How are variables declared at each scope and what is best practice?\n</h3>",
+    "a": "<ul>\n<li>\nGlobal - visible by everything\n</li>\n<li>\nFunction - visible within a function (and its sub-functions and blocks)\n</li>\n<li>\nBlock - visible within a block (and its sub-blocks)\n</li>\n<li>\nModule - visible within a module\n</li>\n</ul>\n\n<p>\nGlobal variables can be declared normally outside functions and blocks, or with window.myVarName = \"myVarValue\";\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://stackoverflow.com/questions/500431/what-is-the-scope-of-variables-in-javascript\">\nKenan at stackoverflow.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat are some methods on the function prototype?\n</h3>",
+    "a": "<p>\n\n</p>"
+  },
+  {
+    "q": "<h3>\nIf you declare a variable inside a for loop is that block scoped or function scoped?\n</h3>",
+    "a": "<p>\nAll local variables in javascript have function scope which means they are alive for the entire function they are declared in. Note that with the introduction of ES6 let, you can now use let inside your loop for real block-scoped variable\n</p>\n\n<p>(<a target=\"_blank\" \nhref=\"https://stackoverflow.com/questions/10200994/declaring-var-inside-javascript-for-loop-declaration\">\nRonan at stackoverflow.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\n<ul>\n<li>\nWhat will happen?\n</li>\n<li>\nconst hi; hi = 3; console.log(hi);\n</li>\n</ul>\n</h3>",
+    "a": "<p>This will cause an error. </p>"
+  },
+  {
+    "q": "<h3>\nWhat are callback functions? What about self-invoking functions?\n</h3>",
+    "a": "<p>\nA callback function is a function that takes a function as input. The idea is that at some point it will call (back) the function it took as input. \n</p>\n<p>\nA function that calls itself is a recursive function. \n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is a truthy or falsy value? List the falsy values.\n</h3>",
+    "a": "<p>\nThere are infinite truthy values, meaning values that are read as true logically. The falsy values are :\n</p>\n<ul>\n<li>\nfalse\n</li>\n<li>\n0, -0, 0n\n</li>\n<li>\n\"\", '', ``\n</li>\n<li>\nnull\n</li>\n<li>\nundefined\n</li>\n<li>\nNaN\n</li>\n<li>\ndocument.all\n</li>\n</ul>\n<p>(<a target=\"_blank\" \nhref=\"https://developer.mozilla.org/en-US/docs/Glossary/Falsy\">\nmozilla.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nlet x = 5; while(x) { console.log(--x); } // what results?\n</h3>\n<h3>\nlet x = 5; while(x) { console.log(x--); } // what results?\n</h3>",
+    "a": "<p>\n--x decrements x and then returns the new value. The first code (--x) returns 4 3 2 1 0, the second (x--) returns 5 4 3 2 1\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is the difference between == and ===?\n</h3>",
+    "a": "<p>\n== allows type coercion where 7 == '7' is true, while === does not. \n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is the difference between \"for of\" and \"for in\"?\n</h3>",
+    "a": "<p>\nfor in loops over enumerable property names of an object (such as keys). for of (new in ES6) does use an object-specific iterator and loops over the values generated by that.\n</p>\n\n<p>(<a target=\"_blank\" \nhref=\"https://stackoverflow.com/questions/29285897/what-is-the-difference-between-for-in-and-for-of-statements\">\nGraham at stackoverflow.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nfunction addOne(value) { value + 1; } \n</h3><h3>\nlet x = 5; addOne(x); console.log(x);\n</h3>",
+    "a": "<p>\nx is unaffected\n</p>"
+  },
+  {
+    "q": "<h3>\nfunction changeUsername(user) {\n<br/>\n&nbsp;&nbsp;user.username = 'new-username';\n<br/>}\n<br/>let user = { username: 'first-username' };\n\n<br/>changeUsername(user);\n<br/>console.log(user.username);\n</h3>",
+    "a": "<p>\nvalue is changed\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is the difference between a do-while and a while loop?\n</h3>",
+    "a": "<p>\ndo-while always runs at least once. While only runs if condition is met.\n</p>"
+  },
+  {
+    "q": "<h3>\nfor(;;){ console.log('a'); }\n</h3>",
+    "a": "<p>\nit's an infinite loop\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is fall-through with regard to switch statements?\n</h3>",
+    "a": "<p>\nonce a case is true, code will continue to execute in all following case statements until a break statement is reached\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat is the difference between console.log(++x) and console.log(x++)?\n</h3>",
+    "a": "<p>\n++x increments then prints, x++ prints then increments.\n</p>"
+  },
+  {
+    "q": "<h3>\nExplain what “strict mode” does\n</h3>",
+    "a": "<ul>\n<li>\neliminates some JavaScript silent errors by changing them to throw errors.\n</li>\n<li>\nfixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that’s not strict mode.\n</li>\n<li>\nprohibits some syntax likely to be defined in future versions of ECMAScript.\n</li>\n<li>\nprevents, or throws errors, when relatively “unsafe” actions are taken (such as gaining access to the global object).\n</li>\n<li>\ndisables features that are confusing or poorly thought out.\n</li>\n<li>\nmakes it easier to write “secure” JavaScript.\n</li>\n</ul>\n\n<p>(<a target=\"_blank\" \nhref=\"https://www.geeksforgeeks.org/strict-mode-javascript/\">\ngeeksforgeeks.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat are the naming conventions for variables and functions used in JavaScript?\n</h3>",
+    "a": "<ul>\n<li>\nMost variables and functions should start with a lower case letter.\n</li>\n<li>\nNames should be formed from the 26 upper and lower case letters (A .. Z, a .. z), the 10 digits (0 .. 9), and _ underbar. \n</li>\n<li>\nAvoid use of international characters because they may not read well or be understood everywhere. \n</li>\n<li>\nDo not use $ (dollar sign) or \\ (backslash) in names.\n</li>\n<li>\nDo not use _ underbar as the first or last character of a name. It is sometimes intended to indicate privacy, but it does not actually provide privacy. If privacy is important, use closure. Avoid conventions that demonstrate a lack of competence.\n</li>\n<li>\nConstructor functions that must be used with the new prefix should start with a capital letter. JavaScript issues neither a compile-time warning nor a run-time warning if a required new is omitted. Bad things can happen if new is missing, so the capitalization convention is an important defense.\n</li>\n<li>\nGlobal variables should be avoided, but when used should be in ALL_CAPS.\n</li>\n</ul>\n\n<p>(<a target=\"_blank\" \nhref=\"https://www.crockford.com/code.html\">\ncrockford.com\n</a>)</p>"
+  },
+  {
+    "q": "<span id=\"intermediate\"></span>\n<h3>\nWhat is function and variable hoisting?\n</h3>",
+    "a": "<p>\nHoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function). JavaScript first looks for variable declarations and then processes expressions. \n</p><p>\nVariables defined with let and const are hoisted to the top of the block, but not initialized.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://www.w3schools.com/js/js_hoisting.asp\">\nw3schools.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nWhat is closure and when should you use it?\n</h3>",
+    "a": "<p>\nVariables created in a function without a declaration keyword are global. Global variable can be used in a function.\n</p>\n<p>\nlet a=4; \n<br/>\nfunction exampleFct(){a=5}; \n<br/>\nexampleFct(); // a === 5 is true\n</p>\n<p>\nfunction exampleFct(){b=5}; \n<br/>\nexampleFct(); // b is now defined and global. \n<br/>\nconsole.log(b); // This prints 5\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat does this do? \n<br/>\nlet a = 0;\n<br/>\nlet arr = [++a, ++a, ++a, ++a];\n<br/>\nlet x = arr.map(function(x){\n<br/>\n&nbsp;&nbsp;return x*x\n<br/>\n});\n<br/>\nconsole.log(x);\n</h3>",
+    "a": "<p>\nSets arr to [1,2,3,4] and prints 1 4 9 16\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat does this do? \n<br/>\nlet a = 0;\n<br/>\nlet arr = [++a, ++a, ++a, ++a];\n<br/>\nlet x = arr.forEach(function(x){\n<br/>\n&nbsp;&nbsp;return x*x\n<br/>\n});\n<br/>\nconsole.log(x);\n</h3>",
+    "a": "<p>\nprints: undefined\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat does the \"this\" keyword refer to?\n</h3>",
+    "a": "<p>\nIn JavaScript, the this keyword refers to an object.\n<br/>\nWhich object depends on how this is being invoked (used or called).\n<br/>\nThe this keyword refers to different objects depending on how it is used:\n</p>\n\n<ul>\n<li>\nIn an object method, \"this\" refers to the object.\n</li>\n<li>\nAlone, \"this\" refers to the global object.\n</li>\n<li>\nIn a function, \"this\" refers to the global object.\n</li>\n<li>\nIn a function, in strict mode, \"this\" is undefined.\n</li>\n<li>\nIn an event, \"this\" refers to the element that received the event.\n</li>\n<li>\nMethods like call(), apply(), and bind() can refer \"this\" to any object.\n</li>\n</ul>\n<p>(<a target=\"_blank\" \nhref=\"https://www.w3schools.com/js/js_this.asp\">\nw3schools.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nExplain the concept of lexical scope\n</h3>",
+    "a": "<p>\nLexical scope is the scope model used by the JavaScript language, which differs to some other languages which use dynamic scope. Lexical scope is the scope defined at lexing time.\n</p>\n<p>\nThe lexing phase of compilation determines where and how all identifiers are declared, and thus how they will be looked up during execution. This is the same mechanism which results in “hoisting” variables. The variables are not actually moved within the source code, the declarations simply occur during the lexing phase and so the JavaScript engine is aware of these before execution.\n</p>\n\n<p>(<a target=\"_blank\" \nhref=\"https://astronautweb.co/javascript-lexical-scope/\">\nastronautweb.co\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nExplain how inheritance works in JS\n</h3>",
+    "a": "<p>\nJavaScript objects are dynamic \"bags\" of properties (referred to as own properties). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.\n</p>\n\n<p>(<a target=\"_blank\" \nhref=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain\">\nmozilla.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>\nHow would you rewrite this using an anonymous function? Arrow function?\n<br/>\nfunction hello(){\n<br/>\n&nbsp;&nbsp;console.log('hello');\n<br/>\n}\n<br/>\ndocument.getElementById('hi').addEventListener(hello);\n</h3>",
+    "a": "<p>\nAnonymous function example\n<br/>\nlet show = function() {console.log(\"Hello\")};\n<br/>\nfunction hi(fct) {fct()}; \n<br/>\nhi(show); // console logs \"Hello\"\n</p>\n<p>\nAnswer with anonymous function:\n<br/>\ndocument.getElementById('hi').addEventListener(function() {console.log(\"Hello\")});\n</p>\n<p>\nArrow function example\n<br/>\nfunction hi(fct) { fct(); };\n<br/>\nhi( () => {console.log(\"Hello\")} );\n</p>\n<p>\nAnswer with arrow function:\n<br/>\ndocument.getElementById('hi').addEventListener( () => {console.log(\"Hello\")} );\n</p>"
+  },
+  {
+    "q": "<h3>\nHow would you handle an error in JS?\n</h3>",
+    "a": "<p>\na try-catch block, or with promises one can use .catch(error => alert(error.message));\n</p>"
+  },
+  {
+    "q": "<h3>\nWhat attributes does an Error object have?\n</h3>",
+    "a": "<p>\nname and message\n</p>"
+  }
+]

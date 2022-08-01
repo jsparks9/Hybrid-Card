@@ -1,0 +1,74 @@
+[
+  {
+    "q": "<h3>Why use TypeScript? Benefits over JavaScript</h3>",
+    "a": "<p>\nTypescript is a superset of JavaScript. The key augmentation TypeScript brings to JavaScript is a type system\n</p>\n<ul>\n<li>\nStrict typing : Everything stays the way we define it. Need a variable to always be a number? It’ll always be a number, then.\n</li>\n<li>\nStructural typing : Indispensable when you care about fully defining the actual structure you use. JavaScript allows for a lot of strange things to be done, so relying on a specific structure is a much safer solution.\n</li>\n<li>\nType annotations : A handy way of saying explicitly what type should be used.\n</li>\n<li>\nType inference : Implicit typing performed by TypeScript itself, so that your developers don’t need to provide types where the compiler can find them on its own.\n</li>\n</ul>\n<p>(<a target=\"_blank\" \nhref=\"https://www.stxnext.com/blog/typescript-pros-cons-javascript/\">\nstxnext.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>What are the primitive data types in TypeScript</h3>",
+    "a": "<ul>\n<li>\nnumber\n</li>\n<li>\nstring\n</li>\n<li>\nboolean\n</li>\n<li>\nnull\n</li>\n<li>\nundefined\n</li>\n</ul>\n<p>(<a target=\"_blank\" \nhref=\"https://www.c-sharpcorner.com/UploadFile/c63ec5/primitive-type-in-typescript/\">\nc-sharpcorner.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>What's the difference between null and undefined</h3>",
+    "a": "<p>\nUndefined means declared but not assigned a value. Null is an assignment value, representing no value.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript\">\nLodewijk at stackoverflow.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>What additional data types exist in TypeScript that are not included in JavaScript</h3>",
+    "a": "<p>\nvoid, enum, class, interface, and specific number types. \n</p>"
+  },
+  {
+    "q": "<h3>What is the \"any\" type</h3>",
+    "a": "<p>\nAllows variable (re)assignment as normal in JavaScript without type checking\n</p>"
+  },
+  {
+    "q": "<h3>How do you declare the type of a variable</h3>",
+    "a": "<p>\nlet color: string = \"blue\";\n</p>"
+  },
+  {
+    "q": "<h3>What does it mean for a variable to have an \"inferred type\"</h3>",
+    "a": "<p>\nThis kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.\n</p>\n<p>\nlet x = 3;\n</p>\n\n<p>(<a target=\"_blank\" \nhref=\"https://www.typescriptlang.org/docs/handbook/type-inference.html\">\ntypescriptlang.org\n</a>)</p>"
+  },
+  {
+    "q": "<h3>How do you specify the return type of a function declaration</h3>",
+    "a": "<p>\nfunction fctName(num: number): string { return \"\"+num; } // Return type string\n</p>"
+  },
+  {
+    "q": "<h3>How is encapsulation used in TypeScript? </h3>",
+    "a": "<p>\nThe implementation and state of each object are privately held inside a defined boundary, or class. Other objects do not have access to this class or the authority to make changes but are only able to call a list of public functions, or methods. This characteristic of data hiding provides greater program security and avoids unintended data corruption.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://dev.to/kevin_odongo35/object-oriented-programming-with-typescript-574o\">\nkevin at dev.to\n</a>)</p>"
+  },
+  {
+    "q": "<h3>How is abstraction used in TypeScript? </h3>",
+    "a": "<p>\nObjects only reveal internal mechanisms that are relevant for the use of other objects, hiding any unnecessary implementation code. This concept helps developers more easily make changes and additions over time.\n</p>\n<p>\nThis is quite powerful in development and TypeScript provides us several ways of manupulating member visibilty in a class object.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://dev.to/kevin_odongo35/object-oriented-programming-with-typescript-574o\">\nkevin at dev.to\n</a>)</p>"
+  },
+  {
+    "q": "<h3>How is inheritance used in TypeScript? </h3>",
+    "a": "<p>\nRelationships and subclasses between objects can be assigned, allowing developers to reuse a common logic while still maintaining a unique hierarchy. \n</p>\n<p>\nclass classA extends classB {} // means classA inherits all the fields and methods of classB.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://dev.to/kevin_odongo35/object-oriented-programming-with-typescript-574o\">\nkevin at dev.to\n</a>)</p>"
+  },
+  {
+    "q": "<h3>How is polymorphism used in TypeScript? </h3>",
+    "a": "<p>\nObjects can take on more than one form depending on the context. The program will determine which meaning or usage is necessary for each execution of that object, cutting down the need to duplicate code.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://dev.to/kevin_odongo35/object-oriented-programming-with-typescript-574o\">\nkevin at dev.to\n</a>)</p>"
+  },
+  {
+    "q": "<h3>What is an interface in TypeScript? Are they the same as Java interfaces?</h3>",
+    "a": "<p>\nIn TypeScript, an interface is used to describe the structure of an object. It contains definition of methods and properties. \n</p>"
+  },
+  {
+    "q": "<h3>What are union types in TypeScript</h3>",
+    "a": "<p>\nA union type allows us to define a variable with multiple types. The union type variables are defined using the pipe ('|') symbol between the types.\n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://howtodoinjava.com/typescript/union-types/\">\nhowtodoinjava.com\n</a>)</p>"
+  },
+  {
+    "q": "<h3>What is the purpose of the \"?\" in the following code: props.currentUser?.username</h3>",
+    "a": "<p>\nThis is called \"optional chaining\" used for optional property access. TypeScript will immediately stop running the expression if currentUser is null or undefined.\n</p>"
+  },
+  {
+    "q": "<h3>What is the purpose of the tsconfig.json file</h3>",
+    "a": "<p>\nThis determines what rules that TypeScript will enforce. \n</p>"
+  },
+  {
+    "q": "<h3>What does \"transpilation\" mean? How is it different than \"compilation\"</h3>",
+    "a": "<p>\nWe use the term \"transpilation\" because TypeScript and JavaScript have a similar abstraction level, whereas compilation refers to translation between languages of differing abstraction levels.\n</p>"
+  },
+  {
+    "q": "<h3>What version of JavaScript does TypeScript transpile into by default</h3>",
+    "a": "<p>\nIt defaults to ES3, but you can use the --target flag to specify a newer version, and some features will take advantage of that. \n</p>\n<p>(<a target=\"_blank\" \nhref=\"https://stackoverflow.com/questions/34646031/what-version-of-javascript-does-typescript-compile-to#:~:text=It%20defaults%20to%20ES3%2C%20but,will%20take%20advantage%20of%20that.\">\nJeremy at stackoverflow.com\n</a>)</p>"
+  }
+]
