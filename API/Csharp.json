@@ -1,0 +1,262 @@
+[
+  {
+    "q": "<h3>What is a constructor?</h3>",
+    "a": "<p>A constructor is a special method in a class that is automatically called when an instance of the class is created. Constructors are used to initialize objects, often setting default values for fields or performing setup steps. In C#, constructors have the same name as the class and do not have a return type.</p>"
+  },
+  {
+    "q": "<h3>What are Value vs Reference Types in C#?</h3>",
+    "a": "<p>Value types store their data directly, whereas reference types store a reference to the data’s memory address. Value types include primitive types like <code>int</code>, <code>float</code>, <code>char</code>, and structs. Reference types include objects, arrays, and strings. When you assign a value type to another variable, a copy is made, but assigning a reference type copies the reference, not the actual data.</p>"
+  },
+  {
+    "q": "<h3>What is Exception Handling and how would you use it? Try Catch? Throw?</h3>",
+    "a": "<p>Exception handling in C# is a mechanism to handle runtime errors, ensuring that the application can handle exceptions gracefully without crashing. <code>try-catch</code> blocks are used to catch exceptions. The <code>throw</code> keyword is used to signal the occurrence of an exception. A typical usage pattern would involve a <code>try</code> block containing the code that might throw an exception, and one or more <code>catch</code> blocks to handle specific exceptions.</p>"
+  },
+  {
+    "q": "<h3>What is a singleton?</h3>",
+    "a": "<p>A singleton is a design pattern that restricts a class to a single instance. This instance is globally accessible and ensures that no more than one object of the class is created. In C#, a singleton is typically implemented using a private constructor, a static instance variable, and a public static method to provide access to the instance.</p>"
+  },
+  {
+    "q": "<h3>How would you empty variable memory when you no longer need it?</h3>",
+    "a": "<p>In C#, memory management is handled by the garbage collector, which automatically frees memory when objects are no longer in use. However, you can help the garbage collector by setting the variable to <code>null</code> (for reference types), or by implementing <code>IDisposable</code> and calling <code>Dispose()</code> to release unmanaged resources.</p>"
+  },
+  {
+    "q": "<h3>What are using statements?</h3>",
+    "a": "<p><code>using</code> statements in C# serve two purposes. First, it can include namespaces, allowing you to use classes defined in those namespaces without fully qualifying their names. Second, it is used to manage resource disposal for objects that implement <code>IDisposable</code>. When the code inside the <code>using</code> block is finished, the <code>Dispose</code> method is automatically called on the object.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between authentication and authorization?</h3>",
+    "a": "<p>Authentication is the process of verifying the identity of a user, typically through a username and password. Authorization, on the other hand, is the process of determining what an authenticated user is allowed to do, such as accessing certain resources or performing specific actions.</p>"
+  },
+  {
+    "q": "<h3>What forms of user input data validations have you used?</h3>",
+    "a": "<p>Common forms of data validation include checking for required fields, validating input formats (like email or phone numbers), range checks (ensuring numbers fall within a specific range), and data type validation (ensuring inputs are of the correct type). Data annotations and validation logic in controllers or services are common in C# applications.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between error logging and debugging?</h3>",
+    "a": "<p>Error logging involves recording errors that occur during the execution of an application, typically to a file, database, or monitoring system, to help diagnose issues after they occur. Debugging is the process of identifying and fixing bugs within the code by running it in a controlled environment, often using a debugger tool to step through the code and inspect variables.</p>"
+  },
+  {
+    "q": "<h3>What access modifiers do you know?</h3>",
+    "a": "<p>C# includes several access modifiers:</p><ul><li><code>public</code>: Accessible from anywhere.</li><li><code>private</code>: Accessible only within the containing class.</li><li><code>protected</code>: Accessible within the containing class and derived classes.</li><li><code>internal</code>: Accessible only within the same assembly.</li><li><code>protected internal</code>: Accessible within the same assembly or in a derived class.</li></ul>"
+  },
+  {
+    "q": "<h3>What are SOLID principles?</h3>",
+    "a": "<p>SOLID is an acronym for five principles of object-oriented design intended to make software designs more understandable, flexible, and maintainable:</p><ul><li><strong>S</strong>ingle Responsibility Principle: A class should have one, and only one, reason to change.</li><li><strong>O</strong>pen/Closed Principle: Software entities should be open for extension but closed for modification.</li><li><strong>L</strong>iskov Substitution Principle: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.</li><li><strong>I</strong>nterface Segregation Principle: Clients should not be forced to depend on interfaces they do not use.</li><li><strong>D</strong>ependency Inversion Principle: High-level modules should not depend on low-level modules, but both should depend on abstractions.</li></ul>"
+  },
+  {
+    "q": "<h3>How do you handle exceptions?</h3>",
+    "a": "<p>Exceptions in C# are handled using <code>try-catch</code> blocks. The code that might throw an exception is placed inside a <code>try</code> block, and the <code>catch</code> block is used to handle the exception. It’s also common to use a <code>finally</code> block to execute code that should run regardless of whether an exception was thrown or not.</p>"
+  },
+  {
+    "q": "<h3>What are abstract classes and interfaces, and how do they differ?</h3>",
+    "a": "<p>An abstract class in C# is a class that cannot be instantiated on its own and is meant to be subclassed. It can include abstract methods (without implementation) as well as implemented methods. An interface, on the other hand, only defines a contract (method signatures) and cannot contain any implementation. Classes or structs that implement an interface must provide an implementation for all its members.</p>"
+  },
+  {
+    "q": "<h3>What are constructors?</h3>",
+    "a": "<p>Constructors are special methods that are called when an object is instantiated. They are used to initialize the object’s state. In C#, constructors have the same name as the class and do not have a return type. They can be overloaded to allow different ways of initializing an object.</p>"
+  },
+  {
+    "q": "<h3>What is Try and Catch?</h3>",
+    "a": "<p><code>Try</code> and <code>Catch</code> are used for exception handling in C#. Code that might throw an exception is placed inside a <code>try</code> block. If an exception occurs, it is caught in the <code>catch</code> block, where the error can be handled.</p>"
+  },
+  {
+    "q": "<h3>How do you handle an exception?</h3>",
+    "a": "<p>An exception in C# is handled using a <code>try-catch</code> block. Within the <code>try</code> block, code that may cause an exception is written. If an exception occurs, control is passed to the <code>catch</code> block, where you can handle the error, log it, or rethrow it. Optionally, a <code>finally</code> block can be used to execute code that should run regardless of whether an exception was thrown.</p>"
+  },
+  {
+    "q": "<h3>What are abstract methods?</h3>",
+    "a": "<p>An abstract method is a method that is declared in an abstract class but does not have an implementation. Subclasses of the abstract class are required to provide an implementation for the abstract methods.</p>"
+  },
+  {
+    "q": "<h3>What is method overloading and overriding?</h3>",
+    "a": "<p>Method overloading in C# occurs when multiple methods have the same name but different parameters (either in number, type, or both). Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass.</p>"
+  },
+  {
+    "q": "<h3>What is value type vs reference type?</h3>",
+    "a": "<p>Value types directly contain their data, whereas reference types contain a reference to their data. Value types are stored on the stack, and reference types are stored on the heap. Value types include simple types like <code>int</code>, <code>char</code>, and structs, while reference types include classes, arrays, and strings.</p>"
+  },
+  {
+    "q": "<h3>What is boxing and unboxing?</h3>",
+    "a": "<p>Boxing is the process of converting a value type to a reference type by wrapping the value inside an object. Unboxing is the reverse process, where the object is converted back to a value type. Boxing and unboxing involve a performance cost due to the additional memory allocation and type conversion.</p>"
+  },
+  {
+    "q": "<h3>Compare Abstract vs Interface</h3>",
+    "a": "<p>Abstract classes can contain both abstract and non-abstract methods, fields, properties, and constructors. Interfaces, on the other hand, only define method signatures and properties without any implementation. A class can implement multiple interfaces, but it can only inherit from one abstract class.</p>"
+  },
+  {
+    "q": "<h3>What is LINQ?</h3>",
+    "a": "<p>LINQ (Language Integrated Query) is a feature in C# that allows querying collections in a syntactic form similar to SQL. LINQ provides a consistent query experience for objects, databases, and XML, allowing developers to filter, order, and group data.</p>"
+  },
+  {
+    "q": "<h3>What is a lambda expression?</h3>",
+    "a": "<p>A lambda expression in C# is an anonymous function that can contain expressions and statements. It is used to create delegates or expression tree types. Lambda expressions are particularly useful in LINQ queries.</p>"
+  },
+  {
+    "q": "<h3>Describe Int.</h3>",
+    "a": "<p><code>int</code> is a value type in C# that represents a 32-bit signed integer. It can hold values from -2,147,483,648 to 2,147,483,647.</p>"
+  },
+  {
+    "q": "<h3>Describe strings.</h3>",
+    "a": "<p><code>string</code> is a reference type in C# that represents a sequence of characters. Strings in C# are immutable, meaning once a string object is created, it cannot be modified.</p>"
+  },
+  {
+    "q": "<h3>What’s the difference between int and string?</h3>",
+    "a": "<p><code>int</code> is a value type representing a 32-bit signed integer, while <code>string</code> is a reference type representing a sequence of characters. <code>int</code> stores numeric data, while <code>string</code> stores text data.</p>"
+  },
+  {
+    "q": "<h3>Multiple inheritance in C#</h3>",
+    "a": "<p>C# does not support multiple inheritance for classes, meaning a class cannot inherit from more than one class. However, a class can implement multiple interfaces.</p>"
+  },
+  {
+    "q": "<h3>How to achieve multiple inheritance in C#?</h3>",
+    "a": "<p>Multiple inheritance in C# can be achieved by implementing multiple interfaces. A class can inherit from a single base class and also implement multiple interfaces, thereby gaining the functionality defined by those interfaces.</p>"
+  },
+  {
+    "q": "<h3>Do you have any experience with LINQ to ADO.Net?</h3>",
+    "a": "<p>LINQ to ADO.NET allows querying databases using LINQ syntax while working with ADO.NET data structures like <code>DataSet</code>, <code>DataTable</code>, and <code>DataView</code>. It simplifies querying data and converting it into strongly typed collections.</p>"
+  },
+  {
+    "q": "<h3>How would you use a connection string without hard coding it into your program?</h3>",
+    "a": "<p>You can store connection strings in a configuration file (e.g., <code>appsettings.json</code> in ASP.NET Core) and retrieve them at runtime. This approach separates configuration from code, making it easier to manage and change without modifying the codebase.</p>"
+  },
+  {
+    "q": "<h3>What are types of constructors?</h3>",
+    "a": "<p>There are several types of constructors in C#:</p><ul><li><strong>Default constructor</strong>: A parameterless constructor that initializes default values.</li><li><strong>Parameterized constructor</strong>: Takes parameters to initialize the object with specific values.</li><li><strong>Copy constructor</strong>: Initializes an object using another object of the same class.</li><li><strong>Static constructor</strong>: Used to initialize static members of the class and is called only once.</li></ul>"
+  },
+  {
+    "q": "<h3>How do you handle exceptions?</h3>",
+    "a": "<p>Exceptions are handled using <code>try-catch</code> blocks. The code that might throw an exception is placed inside a <code>try</code> block, and the <code>catch</code> block is used to handle the exception. A <code>finally</code> block can also be used to execute code that should run regardless of whether an exception was thrown.</p>"
+  },
+  {
+    "q": "<h3>Can you have multiple catch blocks?</h3>",
+    "a": "<p>Yes, you can have multiple <code>catch</code> blocks to handle different types of exceptions separately. Each <code>catch</code> block should handle a specific type of exception.</p>"
+  },
+  {
+    "q": "<h3>Should you have exception handling (try-catches) on all levels of your code, what might be the issues?</h3>",
+    "a": "<p>While it’s important to handle exceptions, placing <code>try-catch</code> blocks at every level can lead to code clutter and poor performance. Instead, exceptions should be caught at a level where meaningful recovery can happen. Overusing <code>try-catch</code> can also hide bugs that should be fixed rather than handled.</p>"
+  },
+  {
+    "q": "<h3>How many ways can you catch Exceptions?</h3>",
+    "a": "<p>In C#, exceptions can be caught using:</p><ul><li><strong>Single catch block</strong>: To catch all exceptions.</li><li><strong>Multiple catch blocks</strong>: To handle different exceptions differently.</li><li><strong><code>catch</code> block with an exception filter</strong>: To catch specific exceptions based on a condition.</li><li><strong><code>catch (Exception ex)</code></strong>: To catch all exceptions and inspect their details.</li></ul>"
+  },
+  {
+    "q": "<h3>What is one specific way of catching exceptions in C#?</h3>",
+    "a": "<p>One specific way to catch exceptions in C# is by using a <code>try-catch</code> block. Within the <code>try</code> block, you place the code that might throw an exception. The <code>catch</code> block is then used to handle the exception, either by logging it, displaying an error message, or taking corrective action. For example:</p><pre><code class=\"has-line-data\" data-line-start=\"129\" data-line-end=\"139\" class=\"language-csharp\"><span class=\"hljs-keyword\">try</span>{<span class=\"hljs-comment\">// Code that may throw an exception</span>}<span class=\"hljs-keyword\">catch</span> (Exception ex){<span class=\"hljs-comment\">// Handle the exception</span>Console.WriteLine(ex.Message);}</code></pre>"
+  },
+  {
+    "q": "<h3>Have you used Exception in C#? Process of Try Catch?</h3>",
+    "a": "<p>Yes, the process of handling exceptions in C# using <code>try-catch</code> involves placing potentially problematic code inside a <code>try</code> block and defining one or more <code>catch</code> blocks to handle specific exceptions. Optionally, a <code>finally</code> block can be used to execute code that should always run, whether an exception is thrown or not.</p>"
+  },
+  {
+    "q": "<h3>Difference between a value and reference type?</h3>",
+    "a": "<p>Value types hold their data directly, while reference types store a reference to their data’s memory address. Value types are stored on the stack, and when they are assigned to another variable, a copy is made. Reference types are stored on the heap, and assigning a reference type to another variable copies the reference, not the data itself.</p>"
+  },
+  {
+    "q": "<h3>How to connect SQL to C#?</h3>",
+    "a": "<p>To connect SQL to C#, you can use ADO.NET, which provides classes like <code>SqlConnection</code>, <code>SqlCommand</code>, and <code>SqlDataReader</code> for interacting with a SQL database. Here’s a simple example:</p><pre><code class=\"has-line-data\" data-line-start=\"150\" data-line-end=\"165\" class=\"language-csharp\"><span class=\"hljs-keyword\">string</span> connectionString = <span class=\"hljs-string\">\"YourConnectionStringHere\"</span>;<span class=\"hljs-keyword\">using</span> (SqlConnection connection = <span class=\"hljs-keyword\">new</span> SqlConnection(connectionString)){connection.Open();<span class=\"hljs-keyword\">string</span> query = <span class=\"hljs-string\">\"SELECT * FROM YourTable\"</span>;<span class=\"hljs-keyword\">using</span> (SqlCommand command = <span class=\"hljs-keyword\">new</span> SqlCommand(query, connection)){SqlDataReader reader = command.ExecuteReader();<span class=\"hljs-keyword\">while</span> (reader.Read()){<span class=\"hljs-comment\">// Process data</span>}}}</code></pre>"
+  },
+  {
+    "q": "<h3>What is the difference between a string and a StringBuilder?</h3>",
+    "a": "<p>A <code>string</code> in C# is immutable, meaning once a string object is created, it cannot be modified. Any modifications create a new string. <code>StringBuilder</code> is mutable, allowing you to modify the string without creating a new object. This makes <code>StringBuilder</code> more efficient for scenarios involving frequent modifications to a string.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between a struct and a class?</h3>",
+    "a": "<p>In C#, <code>struct</code> is a value type, meaning it is stored on the stack, and its value is copied when passed to a method or assigned to another variable. <code>class</code> is a reference type, meaning it is stored on the heap, and only a reference to the data is passed around. Structs are typically used for small, simple data structures, while classes are used for more complex objects.</p>"
+  },
+  {
+    "q": "<h3>What forms of user input data validations have you used?</h3>",
+    "a": "<p>Forms of user input validation include:</p><ul><li><strong>Required field validation</strong>: Ensuring a value is provided.</li><li><strong>Range validation</strong>: Ensuring a numeric value falls within a specific range.</li><li><strong>Regular expressions</strong>: Validating the format of strings, such as emails or phone numbers.</li><li><strong>Data type validation</strong>: Ensuring the input is of the correct type, such as integer or date.</li></ul>"
+  },
+  {
+    "q": "<h3>What data types do you know in C#?</h3>",
+    "a": "<p>Common data types in C# include:</p><ul><li><code>int</code>: 32-bit signed integer.</li><li><code>float</code>: Single-precision floating point.</li><li><code>double</code>: Double-precision floating point.</li><li><code>decimal</code>: High-precision decimal number.</li><li><code>bool</code>: Boolean value (<code>true</code> or <code>false</code>).</li><li><code>char</code>: Single Unicode character.</li><li><code>string</code>: Sequence of characters.</li><li><code>DateTime</code>: Represents date and time.</li><li><code>object</code>: Base type for all types.</li></ul>"
+  },
+  {
+    "q": "<h3>What is the class used to execute from the database?</h3>",
+    "a": "<p>In ADO.NET, the <code>SqlCommand</code> class is used to execute SQL queries and commands against a database.</p>"
+  },
+  {
+    "q": "<h3>What is dependency injection?</h3>",
+    "a": "<p>Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC) between classes and their dependencies. Instead of creating dependencies within a class, they are injected from the outside, typically through the constructor. This makes code more modular, testable, and easier to maintain.</p>"
+  },
+  {
+    "q": "<h3>What is ADO.NET?</h3>",
+    "a": "<p>ADO.NET is a data access technology from the .NET Framework that provides a set of classes for interacting with data sources like databases. It includes classes for connecting to databases (<code>SqlConnection</code>), executing commands (<code>SqlCommand</code>), and reading data (<code>SqlDataReader</code>).</p>"
+  },
+  {
+    "q": "<h3>What are value and reference types?</h3>",
+    "a": "<p>Value types directly hold their data, while reference types hold a reference to the data’s memory location. Value types are stored on the stack, and reference types are stored on the heap. Examples of value types include <code>int</code>, <code>char</code>, and <code>struct</code>, while reference types include <code>class</code>, <code>array</code>, and <code>string</code>.</p>"
+  },
+  {
+    "q": "<h3>What are the types of constructors?</h3>",
+    "a": "<p>C# supports several types of constructors:</p><ul><li><strong>Default constructor</strong>: A parameterless constructor that initializes default values.</li><li><strong>Parameterized constructor</strong>: Takes parameters to initialize the object with specific values.</li><li><strong>Copy constructor</strong>: Initializes an object using another object of the same class.</li><li><strong>Static constructor</strong>: Used to initialize static members of the class.</li></ul>"
+  },
+  {
+    "q": "<h3>How would you make sure that a class could not be inherited?</h3>",
+    "a": "<p>To prevent a class from being inherited in C#, you declare the class as <code>sealed</code>. For example:</p><pre><code class=\"has-line-data\" data-line-start=\"214\" data-line-end=\"219\" class=\"language-csharp\"><span class=\"hljs-keyword\">sealed</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">MyClass</span>{<span class=\"hljs-comment\">// Class definition</span>}</code></pre>"
+  },
+  {
+    "q": "<h3>Global variable vs Static</h3>",
+    "a": "<p>A global variable is not typically used in C# as the language does not support global scope variables. Instead, you use static variables within a class to achieve similar behavior. A <code>static</code> variable belongs to the class rather than any instance of the class, and it retains its value across all instances.</p>"
+  },
+  {
+    "q": "<h3>What are dependencies?</h3>",
+    "a": "<p>Dependencies in software refer to the components or services that a class relies on to perform its functions. In C#, dependencies are often passed into classes through constructors or methods, especially when using Dependency Injection (DI).</p>"
+  },
+  {
+    "q": "<h3>What is error logging?</h3>",
+    "a": "<p>Error logging is the practice of recording errors and exceptions that occur during the execution of an application. This information is typically written to logs, which can be files, databases, or external services, and is used for diagnosing issues and debugging.</p>"
+  },
+  {
+    "q": "<h3>What are microservices/systems? What is data abstraction?</h3>",
+    "a": "<ul><li><strong>Microservices</strong>: Microservices are an architectural style where an application is composed of small, independent services that communicate over a network. Each service is responsible for a specific piece of functionality and can be developed, deployed, and scaled independently.</li><li><strong>Data Abstraction</strong>: Data abstraction is the concept of hiding the implementation details of data and exposing only the necessary parts to the outside world. In object-oriented programming, this is typically achieved through classes and interfaces.</li></ul>"
+  },
+  {
+    "q": "<h3>What is dependency injection?</h3>",
+    "a": "<p>Dependency Injection (DI) is a design pattern used to inject dependencies into a class from the outside, instead of creating them within the class. This allows for better separation of concerns, easier testing, and more flexible code.</p>"
+  },
+  {
+    "q": "<h3>How to connect SQL to C#?</h3>",
+    "a": "<p>To connect SQL to C#, you use ADO.NET. Here’s an example of connecting to a SQL Server database:</p><pre><code class=\"has-line-data\" data-line-start=\"240\" data-line-end=\"255\" class=\"language-csharp\"><span class=\"hljs-keyword\">string</span> connectionString = <span class=\"hljs-string\">\"YourConnectionStringHere\"</span>;<span class=\"hljs-keyword\">using</span> (SqlConnection connection = <span class=\"hljs-keyword\">new</span> SqlConnection(connectionString)){connection.Open();<span class=\"hljs-keyword\">string</span> query = <span class=\"hljs-string\">\"SELECT * FROM YourTable\"</span>;<span class=\"hljs-keyword\">using</span> (SqlCommand command = <span class=\"hljs-keyword\">new</span> SqlCommand(query, connection)){SqlDataReader reader = command.ExecuteReader();<span class=\"hljs-keyword\">while</span> (reader.Read()){<span class=\"hljs-comment\">// Process data</span>}}}</code></pre>"
+  },
+  {
+    "q": "<h3>If the memory is too big, how do you clear that exception with using try/catch block?</h3>",
+    "a": "<p>To handle an <code>OutOfMemoryException</code>, you should first attempt to optimize your memory usage, such as by releasing unused resources or using memory-efficient data structures. In a <code>try-catch</code> block, you can catch the <code>OutOfMemoryException</code> and take appropriate actions, such as freeing up memory, logging the error, or shutting down gracefully.</p>"
+  },
+  {
+    "q": "<h3>Is method overloading being a runtime method or compile-time method?</h3>",
+    "a": "<p>Method overloading is a compile-time feature. The decision about which overloaded method to call is made at compile-time based on the number and types of arguments passed to the method.</p>"
+  },
+  {
+    "q": "<h3>There are how many types of constructors in C#?</h3>",
+    "a": "<p>C# supports several types of constructors:</p><ul><li><strong>Default constructor</strong>: No parameters, initializes default values.</li><li><strong>Parameterized constructor</strong>: Takes parameters to initialize specific values.</li><li><strong>Copy constructor</strong>: Initializes an object using another object of the same class.</li><li><strong>Static constructor</strong>: Used to initialize static members, called only once.</li></ul>"
+  },
+  {
+    "q": "<h3>What is <code>IDisposable</code>?</h3>",
+    "a": "<p><code>IDisposable</code> is an interface in C# that contains a single method, <code>Dispose()</code>. It is used to release unmanaged resources like file handles, database connections, or memory allocated through unmanaged code. Classes that use unmanaged resources should implement <code>IDisposable</code> to allow for proper resource management.</p>"
+  },
+  {
+    "q": "<h3>Have you done any Serialization, What kind?</h3>",
+    "a": "<p>Serialization is the process of converting an object into a format that can be stored or transmitted, and later reconstructed. In C#, common forms of serialization include:</p><ul><li><strong>Binary serialization</strong>: Converts an object into a binary format.</li><li><strong>XML serialization</strong>: Converts an object into an XML format.</li><li><strong>JSON serialization</strong>: Converts an object into a JSON format.</li></ul>"
+  },
+  {
+    "q": "<h3>What is finalize and dispose?</h3>",
+    "a": "<ul><li><strong>Finalize</strong>: <code>Finalize</code> is a method in C# that is used to perform cleanup operations before an object is reclaimed by garbage collection. It is called automatically and cannot be invoked directly. The <code>Finalize</code> method is overridden using a destructor (<code>~ClassName</code>).</li><li><strong>Dispose</strong>: <code>Dispose</code> is a method defined by the <code>IDisposable</code> interface. It is used to explicitly release unmanaged resources when an object is no longer needed. Unlike <code>Finalize</code>, <code>Dispose</code> is called explicitly by the code.</li></ul>"
+  },
+  {
+    "q": "<h3>Should you have an <code>IDisposable</code> in all parts of your code?</h3>",
+    "a": "<p>No, <code>IDisposable</code> should only be implemented in classes that manage unmanaged resources. For classes that don’t interact with unmanaged resources, implementing <code>IDisposable</code> is unnecessary and could lead to unnecessary complexity.</p>"
+  },
+  {
+    "q": "<h3>How would you create an employee class?</h3>",
+    "a": "<p>Here is a simple example of creating an <code>Employee</code> class in C#:</p><pre><code class=\"has-line-data\" data-line-start=\"291\" data-line-end=\"312\" class=\"language-csharp\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Employee</span>{<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">int</span> EmployeeId { <span class=\"hljs-keyword\">get</span>; <span class=\"hljs-keyword\">set</span>; }<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">string</span> FirstName { <span class=\"hljs-keyword\">get</span>; <span class=\"hljs-keyword\">set</span>; }<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">string</span> LastName { <span class=\"hljs-keyword\">get</span>; <span class=\"hljs-keyword\">set</span>; }<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">string</span> Position { <span class=\"hljs-keyword\">get</span>; <span class=\"hljs-keyword\">set</span>; }<span class=\"hljs-function\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-title\">Employee</span>(<span class=\"hljs-params\"><span class=\"hljs-keyword\">int</span> employeeId, <span class=\"hljs-keyword\">string</span> firstName, <span class=\"hljs-keyword\">string</span> lastName, <span class=\"hljs-keyword\">string</span> position</span>)</span>{EmployeeId = employeeId;FirstName = firstName;LastName = lastName;Position = position;}<span class=\"hljs-function\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">DisplayEmployeeInfo</span>(<span class=\"hljs-params\"></span>)</span>{Console.WriteLine($<span class=\"hljs-string\">\"{FirstName} {LastName}, Position: {Position}\"</span>);}}</code></pre>"
+  },
+  {
+    "q": "<h3>What is <code>IEnumerable</code>?</h3>",
+    "a": "<p><code>IEnumerable</code> is an interface in C# that defines a single method, <code>GetEnumerator()</code>, which returns an enumerator that iterates through a collection. <code>IEnumerable</code> is the base interface for all non-generic collections in C#, and it allows foreach loops to iterate over a collection.</p>"
+  },
+  {
+    "q": "<h3>What are the different types of constructors?</h3>",
+    "a": "<p>The types of constructors in C# include:</p><ul><li><strong>Default constructor</strong>: No parameters, initializes default values.</li><li><strong>Parameterized constructor</strong>: Takes parameters to initialize specific values.</li><li><strong>Copy constructor</strong>: Initializes an object using another object of the same class.</li><li><strong>Static constructor</strong>: Used to initialize static members of the class, called only once when the class is first loaded into memory.</li></ul>"
+  }
+]

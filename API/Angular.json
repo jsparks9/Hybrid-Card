@@ -1,0 +1,138 @@
+[
+  {
+    "q": "<h3>What are directives in Angular?</h3>",
+    "a": "<p>Directives are special markers in the DOM that tell Angular to attach specific behavior to that DOM element or even transform the DOM and its children. There are three types of directives in Angular: components (which are a type of directive), attribute directives, and structural directives.</p>"
+  },
+  {
+    "q": "<h3>What is routing?</h3>",
+    "a": "<p>Routing in Angular refers to the mechanism that allows you to navigate between different views or pages in a single-page application (SPA). It involves defining routes, which map URLs to components, and allows for deep linking and navigation without reloading the page.</p>"
+  },
+  {
+    "q": "<h3>What are HTTP response codes?</h3>",
+    "a": "<p>HTTP response codes are status codes returned by a server to indicate the outcome of an HTTP request. Common ones include:\n- 200 OK: The request succeeded.\n- 201 Created: The request succeeded, and a new resource was created.\n- 400 Bad Request: The request was malformed or invalid.\n- 401 Unauthorized: Authentication is required, or has failed.\n- 404 Not Found: The requested resource could not be found.\n- 500 Internal Server Error: A generic server error occurred.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between `let` and `var`?</h3>",
+    "a": "<p>- `var` is function-scoped, meaning it’s scoped to the function in which it is declared.\n- `let` is block-scoped, meaning it’s scoped to the nearest enclosing block (e.g., a loop, an if statement). `let` does not allow re-declaration in the same scope, while `var` does.</p>"
+  },
+  {
+    "q": "<h3>How do you style a selector in a CSS file?</h3>",
+    "a": "<p>To style an element or Angular component using a CSS selector, you define rules in a `.css` file. For example:\n```css\n.my-class {\n  color: red;\n}\n```\nHere, `.my-class` is the selector, and the styles defined within it will apply to all elements with the `my-class` class.</p>"
+  },
+  {
+    "q": "<h3>How to connect Angular to the API?</h3>",
+    "a": "<p>Angular connects to an API using the `HttpClient` service, which allows you to send HTTP requests (GET, POST, etc.) and receive responses. You need to import `HttpClientModule` in your `AppModule` and inject `HttpClient` into your services or components to use it.</p>"
+  },
+  {
+    "q": "<h3>What is session? How long is a session stored?</h3>",
+    "a": "<p>A session typically refers to the duration in which a user interacts with an application, usually managed on the server. Session data can be stored in memory, cookies, or a database. The duration of a session depends on how it’s configured, often until the user closes the browser or a specified timeout occurs.</p>"
+  },
+  {
+    "q": "<h3>Write out an HTTP request from Angular that would connect to your API.</h3>",
+    "a": "<p>```typescript\nthis.httpClient.get('https://api.example.com/data')\n  .subscribe(response => {\n    console.log(response);\n  });\n```\nHere, `httpClient.get()` makes a GET request to the API, and the response is logged to the console.</p>"
+  },
+  {
+    "q": "<h3>What does it mean to seal a project?</h3>",
+    "a": "<p>Sealing a project generally refers to finalizing the project, where no further changes or modifications are allowed. This could involve code freeze, locking down the version, or preparing it for deployment.</p>"
+  },
+  {
+    "q": "<h3>What ng directive do you use to bind information?</h3>",
+    "a": "<p>`ngModel` is a directive used in Angular for two-way data binding, allowing data to flow from the component to the view and vice versa.</p>"
+  },
+  {
+    "q": "<h3>What are some Angular directives?</h3>",
+    "a": "<p>Common Angular directives include:\n- `ngIf`: Conditionally includes a template.\n- `ngFor`: Iterates over a collection and creates views for each item.\n- `ngClass`: Adds or removes a set of CSS classes.\n- `ngStyle`: Adds or removes inline styles.</p>"
+  },
+  {
+    "q": "<h3>What is `ngBind`?</h3>",
+    "a": "<p>`ngBind` is an AngularJS directive used to bind data to an HTML element. However, in Angular (2+), `ngBind` is replaced by `{{ }}` interpolation for one-way data binding.</p>"
+  },
+  {
+    "q": "<h3>How would you bootstrap an Angular project?</h3>",
+    "a": "<p>Bootstrapping an Angular project involves initializing the application by loading the root module (`AppModule`) and the root component (`AppComponent`). This is automatically handled by Angular when you create a new project.</p>"
+  },
+  {
+    "q": "<h3>How do you add components in Angular?</h3>",
+    "a": "<p>You can add a new component using the Angular CLI with the command:\n```bash\nng generate component component-name\n```\nThis creates the necessary files and updates the module to include the new component.</p>"
+  },
+  {
+    "q": "<h3>How do you add styling?</h3>",
+    "a": "<p>Styling in Angular can be added via component-specific CSS files, global styles in `styles.css`, or inline styles using the `styleUrls` or `styles` properties in the component decorator.</p>"
+  },
+  {
+    "q": "<h3>How do you build Angular for hosting?</h3>",
+    "a": "<p>You can build an Angular project for production using the command:\n```bash\nng build --prod\n```\nThis creates an optimized version of your application in the `dist/` directory, ready for hosting.</p>"
+  },
+  {
+    "q": "<h3>Have you done Angular unit testing?</h3>",
+    "a": "<p>Angular provides built-in support for unit testing with tools like Jasmine and Karma. You can create and run tests using Angular CLI commands such as `ng test`.</p>"
+  },
+  {
+    "q": "<h3>What is lazy loading in Angular?</h3>",
+    "a": "<p>Lazy loading in Angular is a design pattern where feature modules are loaded on demand rather than at the initial startup. This can improve the performance of your application by loading only the necessary modules.</p>"
+  },
+  {
+    "q": "<h3>How do you deploy a project in Angular?</h3>",
+    "a": "<p>After building your project with `ng build --prod`, you can deploy the contents of the `dist/` directory to a web server, cloud service, or a hosting platform.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between structural and attribute directives?</h3>",
+    "a": "<p>- Structural directives (e.g., `ngIf`, `ngFor`) change the DOM layout by adding or removing elements.\n- Attribute directives (e.g., `ngClass`, `ngStyle`) change the appearance or behavior of an element by altering its attributes.</p>"
+  },
+  {
+    "q": "<h3>Through Angular, how do you make calls to the backend API?</h3>",
+    "a": "<p>You make calls to a backend API using the `HttpClient` service, which allows you to send HTTP requests and receive responses asynchronously.</p>"
+  },
+  {
+    "q": "<h3>Tell me how you would add a new component to an Angular project.</h3>",
+    "a": "<p>Use the Angular CLI to generate a new component:\n```bash\nng generate component component-name\n```\nThis will create the necessary files and update your module.</p>"
+  },
+  {
+    "q": "<h3>What is bundling? (In Angular)</h3>",
+    "a": "<p>Bundling in Angular refers to the process of combining multiple JavaScript, CSS, and HTML files into single or smaller sets of files to optimize loading and performance.</p>"
+  },
+  {
+    "q": "<h3>What are Decorators and Observables?</h3>",
+    "a": "<p>- <strong>Decorators</strong>: Special functions in Angular used to modify classes, properties, or methods, e.g., `@Component`, `@Injectable`.\n- <strong>Observables</strong>: A key part of Reactive Programming in Angular, used to handle asynchronous data streams, typically provided by the `HttpClient`.</p>"
+  },
+  {
+    "q": "<h3>What are directives?</h3>",
+    "a": "<p>Directives are classes that add behavior to elements in Angular. They are used to manipulate the DOM and control how the application behaves.</p>"
+  },
+  {
+    "q": "<h3>Describe one of the named directives.</h3>",
+    "a": "<p><strong>ngIf</strong>: This directive conditionally adds or removes an element from the DOM based on the truthiness of an expression.</p>"
+  },
+  {
+    "q": "<h3>How do you bootstrap an Angular project?</h3>",
+    "a": "<p>An Angular project is bootstrapped by specifying the root module in `main.ts`, which Angular then uses to load and compile the application.</p>"
+  },
+  {
+    "q": "<h3>How would you pass data from one component to another?</h3>",
+    "a": "<p>You can pass data from a parent component to a child component using Input properties and receive data from a child component to a parent using Output properties and event emitters.</p>"
+  },
+  {
+    "q": "<h3>What is minification?</h3>",
+    "a": "<p>Minification is the process of removing unnecessary characters (like whitespace, comments) from the code without changing its functionality, to reduce file size and improve load times.</p>"
+  },
+  {
+    "q": "<h3>What is NPM?</h3>",
+    "a": "<p>NPM (Node Package Manager) is a package manager for JavaScript, allowing you to install, share, and manage dependencies for your projects.</p>"
+  },
+  {
+    "q": "<h3>What is the lifecycle hook?</h3>",
+    "a": "<p>Lifecycle hooks are specific methods in Angular that allow you to tap into key moments of a component’s life, such as initialization, changes, or destruction (e.g., `ngOnInit`, `ngOnDestroy`).</p>"
+  },
+  {
+    "q": "<h3>What is the root module of an Angular app?</h3>",
+    "a": "<p>The root module in an Angular app is typically named `AppModule`, and it’s the main entry point where Angular starts compiling and launching the application.</p>"
+  },
+  {
+    "q": "<h3>Where is the entry point of an Angular app?</h3>",
+    "a": "<p>The entry point of an Angular app is the `main.ts` file, where the root module is bootstrapped.</p>"
+  },
+  {
+    "q": "<h3>What is early binding and late binding?</h3>",
+    "a": "<p>- <strong>Early binding</strong>: Resolving function, method, or variable binding at compile-time.\n- <strong>Late binding</strong>: Resolving these bindings at runtime, allowing more dynamic execution but at the cost of some performance.</p>"
+  }
+]

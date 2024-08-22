@@ -1,0 +1,187 @@
+[
+  {
+    "q": "<h3>Connection Differences Between <a href=\"http://ADO.NET\">ADO.NET</a> and Entity Framework</h3>",
+    "a": "<p><strong><a href=\"http://ADO.NET\">ADO.NET</a></strong> is a data access technology that provides a low-level connection to databases. It requires explicit management of connections, commands, and data readers. When using <a href=\"http://ADO.NET\">ADO.NET</a>, you need to open and close connections manually, write SQL queries, and handle data retrieval and updates explicitly.</p><p><strong>Entity Framework (EF)</strong>, on the other hand, is an Object-Relational Mapping (ORM) framework that abstracts database interactions. It provides a higher-level API, automatically managing connections, transactions, and object state tracking. In Entity Framework, you work with objects representing your database entities rather than directly with the database itself, reducing the need for explicit SQL and connection management.</p>"
+  },
+  {
+    "q": "<h3>How You Modeled a Database (or Class) Using Entity Framework</h3>",
+    "a": "<p>In Entity Framework, you can model a database using either <strong>Database-First</strong>, <strong>Model-First</strong>, or <strong>Code-First</strong> approaches:</p><ul><li><p><strong>Code-First Approach</strong>: You define your database schema directly in the code by creating classes that represent your entities. For example:</p><pre><code>public class Student { public int StudentId { get; set; } public string Name { get; set; } public DateTime DateOfBirth { get; set; } public ICollection&lt;Enrollment&gt; Enrollments { get; set; } } public class Enrollment { public int EnrollmentId { get; set; } public int StudentId { get; set; } public int CourseId { get; set; } public Student Student { get; set; } public Course Course { get; set; } }</code></pre><p>Entity Framework will use these classes to generate the database schema.</p></li><li><p><strong>Database-First Approach</strong>: You start with an existing database, and Entity Framework generates the classes (entity classes) and the context class based on the database schema.</p></li></ul>"
+  },
+  {
+    "q": "<h3>Error and Exception Handling in Entity Framework</h3>",
+    "a": "<p>Entity Framework provides several mechanisms for error and exception handling:</p><ul><li><p><strong>Handling <code>DbUpdateException</code></strong>: This exception occurs during database updates (e.g., when calling <code>SaveChanges()</code>), indicating a problem with updating the database.</p><pre><code>try { context.SaveChanges(); } catch (DbUpdateException ex) { // Handle exception or log details here }</code></pre></li><li><p><strong>Handling <code>DbEntityValidationException</code></strong>: This exception occurs when entity validation fails.</p><pre><code>try { context.SaveChanges(); } catch (DbEntityValidationException ex) { foreach (var validationError in ex.EntityValidationErrors) { // Handle validation errors } }</code></pre></li><li><p><strong>Handling <code>OptimisticConcurrencyException</code></strong>: This exception occurs when there is a concurrency conflict.</p><pre><code>try { context.SaveChanges(); } catch (DbUpdateConcurrencyException ex) { // Handle concurrency exception }</code></pre></li></ul>"
+  },
+  {
+    "q": "<h3>What is ADO</h3>",
+    "a": "<p><strong>ADO (ActiveX Data Objects)</strong> is a set of COM-based components that provides a high-level programming interface for accessing data stored in relational and non-relational databases. It allows for easy and flexible data access, providing mechanisms to connect to a database, retrieve, manipulate, and update data using SQL commands.</p>"
+  },
+  {
+    "q": "<h3>How to Connect with Database Using <a href=\"http://ADO.NET\">ADO.NET</a></h3>",
+    "a": "<p>To connect to a database using <a href=\"http://ADO.NET\">ADO.NET</a>, you typically perform the following steps:</p><ol><li><p><strong>Create a Connection Object</strong>: Use the <code>SqlConnection</code> (for SQL Server) or <code>OleDbConnection</code> (for other databases) to establish a connection to the database.</p><pre><code>string connectionString = \"your_connection_string\"; using (SqlConnection connection = new SqlConnection(connectionString)) { connection.Open(); // Perform database operations }</code></pre></li><li><p><strong>Execute Commands</strong>: Use <code>SqlCommand</code> to execute SQL queries or stored procedures.</p><pre><code>string query = \"SELECT * FROM Students\"; using (SqlCommand command = new SqlCommand(query, connection)) { SqlDataReader reader = command.ExecuteReader(); // Process the results }</code></pre></li><li><p><strong>Handle Data</strong>: Use <code>SqlDataReader</code>, <code>DataSet</code>, or <code>DataTable</code> to retrieve and manipulate data.</p></li></ol>"
+  },
+  {
+    "q": "<h3>How to Write SQL Queries with Entity Framework</h3>",
+    "a": "<p>Entity Framework allows you to write SQL queries in two primary ways:</p><ol><li><p><strong>LINQ to Entities</strong>: Write queries using LINQ (Language-Integrated Query) syntax, which is then translated into SQL by Entity Framework.</p><pre><code>var students = context.Students.Where(s => s.Name == \"John\").ToList();</code></pre></li><li><p><strong>Raw SQL Queries</strong>: Execute raw SQL queries directly if needed.</p><pre><code>var students = context.Students.FromSqlRaw(\"SELECT * FROM Students WHERE Name = {0}\", \"John\").ToList();</code></pre></li></ol>"
+  },
+  {
+    "q": "<h3>What is Entity Framework?</h3>",
+    "a": "<p><strong>Entity Framework (EF)</strong> is an ORM framework for .NET applications that enables developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers typically need to write. EF maps the objects in your code to the tables in the database and handles CRUD (Create, Read, Update, Delete) operations. It supports multiple database providers, including SQL Server, MySQL, and PostgreSQL, among others.</p>"
+  },
+  {
+    "q": "<h3>How Do You Make Queries in Entity Framework?</h3>",
+    "a": "<p>In Entity Framework (EF), queries are typically made using <strong>LINQ (Language-Integrated Query)</strong> or <strong>Raw SQL</strong>.</p><ul><li><p><strong>LINQ Queries</strong>: EF translates LINQ queries into SQL that is executed on the database. LINQ allows you to query your database using C# syntax.</p><pre><code>var students = context.Students.Where(s => s.Age > 18).ToList();</code></pre></li><li><p><strong>Raw SQL Queries</strong>: You can also execute raw SQL queries directly if you need more control or if LINQ cannot express the required SQL.</p><pre><code>var students = context.Students.FromSqlRaw(\"SELECT * FROM Students WHERE Age > 18\").ToList();</code></pre></li></ul>"
+  },
+  {
+    "q": "<h3>Entity Framework</h3>",
+    "a": "<p><strong>Entity Framework (EF)</strong> is an Object-Relational Mapping (ORM) framework that enables .NET developers to work with a database using .NET objects. It abstracts the database interactions, allowing developers to write data access logic in a more object-oriented manner. EF supports multiple database providers and facilitates CRUD operations without writing raw SQL.</p>"
+  },
+  {
+    "q": "<h3>Code-First vs. Database-First</h3>",
+    "a": "<p><strong>Code-First</strong>: In this approach, you define your data model in the code as classes. EF will generate the database schema based on these classes. This approach is beneficial when starting a new project without an existing database, as it allows you to design the database schema in your codebase.</p><pre><code>public class Student { public int StudentId { get; set; } public string Name { get; set; } public DateTime DateOfBirth { get; set; } }</code></pre><p><strong>Database-First</strong>: This approach starts with an existing database, and EF generates the classes (entity classes) and context class based on the database schema. It’s ideal when you are working with an existing database and need to create a model that maps to its structure.</p>"
+  },
+  {
+    "q": "<h3>Connecting Database to API, How to Make Changes in the Database</h3>",
+    "a": "<p>To connect a database to an API using Entity Framework:</p><ol><li><p><strong>Configure EF in Your API</strong>: Set up the DbContext in your API to interact with the database.</p><pre><code>public class ApplicationDbContext : DbContext { public DbSet&lt;Student&gt; Students { get; set; } public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : base(options) { } }</code></pre></li><li><p><strong>Dependency Injection</strong>: Register the DbContext in the API’s <code>Startup.cs</code> or <code>Program.cs</code>.</p><pre><code>services.AddDbContext&lt;ApplicationDbContext&gt;(options => options.UseSqlServer(Configuration.GetConnectionString(\"DefaultConnection\")));</code></pre></li><li><p><strong>CRUD Operations</strong>: Use the DbContext to perform CRUD operations inside your API controllers or services.</p><pre><code>public async Task&lt;IActionResult&gt; AddStudent(Student student) { _context.Students.Add(student); await _context.SaveChangesAsync(); return Ok(student); }</code></pre></li><li><p><strong>Applying Migrations</strong>: To apply changes to the database schema, use EF migrations.</p><pre><code>dotnet ef migrations add InitialCreate\ndotnet ef database update</code></pre></li></ol>"
+  },
+  {
+    "q": "<h3>When Using <a href=\"http://ADO.NET\">ADO.NET</a>, How Do You Map the Response to the Model?</h3>",
+    "a": "<p>In <a href=\"http://ADO.NET\">ADO.NET</a>, you typically map the response to a model manually by reading the data from a <code>SqlDataReader</code> and assigning it to the properties of your model class.</p><pre><code>using (SqlCommand command = new SqlCommand(query, connection)) { using (SqlDataReader reader = command.ExecuteReader()) { while (reader.Read()) { var student = new Student { StudentId = reader.GetInt32(0), Name = reader.GetString(1), DateOfBirth = reader.GetDateTime(2) }; students.Add(student); } } }</code></pre>"
+  },
+  {
+    "q": "<h3>What is the Difference Between ADO and EF?</h3>",
+    "a": "<p><strong><a href=\"http://ADO.NET\">ADO.NET</a></strong> is a lower-level data access technology that requires you to manually manage database connections, execute SQL commands, and handle data retrieval. It offers more control and is generally faster but requires more code and a deeper understanding of SQL and database interactions.</p><p><strong>Entity Framework (EF)</strong> is a higher-level ORM that abstracts much of the complexity involved in database interactions. It allows developers to work with objects rather than writing raw SQL, automatically managing connections and the database context. While EF simplifies development and reduces boilerplate code, it may not offer the same performance or fine-grained control as <a href=\"http://ADO.NET\">ADO.NET</a>.</p>"
+  },
+  {
+    "q": "<h3>What is the JIT compiler?</h3>",
+    "a": "<p>The Just-In-Time (JIT) compiler is a crucial component of the .NET runtime that converts the Intermediate Language (IL) code (which is generated from C# or other .NET languages) into machine code. This compilation happens at runtime, meaning the IL code is translated into machine-specific instructions just before the code is executed by the CPU. The JIT compiler optimizes this code based on the target environment, which helps improve the performance of .NET applications. There are different types of JIT compilation strategies, such as Pre-JIT (compile the entire code at once), Econo-JIT (compile methods only when they are called, and discard them when not needed), and Normal-JIT (compile methods only when they are called and keep them in memory).</p>"
+  },
+  {
+    "q": "<h3>What is the CLR?</h3>",
+    "a": "<p>The Common Language Runtime (CLR) is the virtual machine component of the .NET framework. It manages the execution of .NET programs and provides various services, such as memory management, type safety, exception handling, garbage collection, security, and thread management. The CLR is responsible for converting the Intermediate Language (IL) code into native machine code using the JIT compiler, and it ensures that the code runs in a safe and controlled environment.</p>"
+  },
+  {
+    "q": "<h3>Describe to me how you would use references in a project?</h3>",
+    "a": "<p>In a .NET project, references are used to include external libraries or other assemblies (e.g., DLL files) that your project depends on. These references could be to standard .NET libraries, third-party libraries, or other projects within your solution.</p><p>To add a reference in a project:</p><ol><li><strong>Visual Studio</strong>: Right-click on the “References” node in your project within the Solution Explorer, and select “Add Reference.” You can then choose from .NET libraries, other projects within your solution, or browse to an external DLL file.</li><li><strong>.NET CLI</strong>: You can add references using the .NET CLI with the command <code>dotnet add reference &lt;path-to-project-or-dll&gt;</code>.</li><li><strong>NuGet</strong>: If the reference is a package available via NuGet, you can add it using the NuGet Package Manager or by running <code>dotnet add package &lt;package-name&gt;</code> in the CLI.</li></ol><p>Once a reference is added, you can use the classes and methods from the referenced library or assembly in your code by including the appropriate <code>using</code> directives at the beginning of your files.</p>"
+  },
+  {
+    "q": "<h3>What is a DLL?</h3>",
+    "a": "<p>A Dynamic Link Library (DLL) is a file that contains compiled code, resources, and data that can be used by multiple applications simultaneously. In the context of .NET, a DLL is an assembly that is not an executable, meaning it cannot run on its own but provides functionality that other programs can call upon. DLLs help in modularizing code, promoting code reuse, and enabling versioning. For example, a .NET class library project will compile to a DLL file, which can then be referenced and used by other projects.</p>"
+  },
+  {
+    "q": "<h3>What is the Common Type System (CTS) in terms of the .NET framework?</h3>",
+    "a": "<p>The Common Type System (CTS) is a standard that defines how data types are declared, used, and managed in the .NET framework. It ensures that all .NET languages (e.g., C#, <a href=\"http://VB.NET\">VB.NET</a>, F#) can interoperate by providing a common set of data types that all languages must follow. For example, an <code>int</code> in C# and an <code>Integer</code> in <a href=\"http://VB.NET\">VB.NET</a> both correspond to the <code>System.Int32</code> type defined by the CTS. This standardization allows for type safety and cross-language integration within the .NET ecosystem.</p>"
+  },
+  {
+    "q": "<h3>What is an Assembly in .NET?</h3>",
+    "a": "<p>An assembly in .NET is a compiled code library used for deployment, versioning, and security. It is the smallest unit of deployment in a .NET application and can be either a DLL (for libraries) or an EXE (for executable applications). An assembly contains the Intermediate Language (IL) code generated by the compiler, metadata about the types and members defined in the code, and an optional set of resources like images or strings. Assemblies also include a manifest that describes the assembly itself, including its version, culture, and the types it exposes. Assemblies are crucial for the modular architecture of .NET applications and are the building blocks of the .NET framework.</p>"
+  },
+  {
+    "q": "<h3>What is ASP.NET?</h3>",
+    "a": "<p>ASP.NET is a web framework developed by Microsoft that allows developers to build dynamic web applications, services, and sites. It is part of the .NET framework and enables the development of both server-side and client-side web applications using languages such as C# and VB.NET. ASP.NET provides various features like state management, server controls, and integrated security mechanisms to streamline the development of web applications.</p>"
+  },
+  {
+    "q": "<h3>What is ASP.NET MVC?</h3>",
+    "a": "<p>ASP.NET MVC is a framework for building web applications using the Model-View-Controller (MVC) architectural pattern. This pattern divides the application into three main components: the Model (business logic and data), the View (user interface), and the Controller (handles user input and interactions). ASP.NET MVC is designed to separate concerns, making it easier to manage, test, and scale applications.</p>"
+  },
+  {
+    "q": "<h3>What is REST?</h3>",
+    "a": "<p>REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on stateless, client-server communication, typically using HTTP as the protocol. RESTful APIs allow clients to interact with resources using standard HTTP methods (GET, POST, PUT, DELETE) and are designed to be simple, scalable, and flexible.</p>"
+  },
+  {
+    "q": "<h3>What is the purpose of unit testing?</h3>",
+    "a": "<p>Unit testing involves testing individual units or components of a software application in isolation to ensure they work as expected. The primary purpose is to validate that each part of the software functions correctly, which helps in identifying and fixing bugs early in the development process. Unit tests also serve as documentation and can facilitate refactoring by ensuring that changes do not break existing functionality.</p>"
+  },
+  {
+    "q": "<h3>What are some of the segments of software testing before it goes to production?</h3>",
+    "a": "<p>Before software is released to production, it undergoes several testing phases, including:\n- Unit Testing: Testing individual components or functions.\n- Integration Testing: Testing the interaction between integrated components or systems.\n- System Testing: Testing the complete and integrated application to verify it meets the specified requirements.\n- Acceptance Testing: Testing by the end-users or stakeholders to validate the software against business requirements.\n- Performance Testing: Testing the application’s performance under various conditions, including load testing and stress testing.\n- Security Testing: Ensuring that the application is secure from vulnerabilities and threats.</p>"
+  },
+  {
+    "q": "<h3>HTTP Methods (What They Do)</h3>",
+    "a": "<p>- GET: Retrieves data from the server.\n- POST: Submits data to the server, often resulting in a change in state or side effects on the server.\n- PUT: Updates or replaces an existing resource on the server.\n- DELETE: Removes a resource from the server.\n- PATCH: Partially updates a resource on the server.\n- HEAD: Similar to GET but only retrieves the headers, not the body of the resource.\n- OPTIONS: Describes the communication options for the target resource.</p>"
+  },
+  {
+    "q": "<h3>HTTP Status Codes (Examples)</h3>",
+    "a": "<p>- 200 OK: The request has succeeded.\n- 201 Created: The request has been fulfilled, and a new resource has been created.\n- 400 Bad Request: The server cannot process the request due to client-side errors.\n- 401 Unauthorized: The request requires user authentication.\n- 403 Forbidden: The server understands the request but refuses to authorize it.\n- 404 Not Found: The server cannot find the requested resource.\n- 500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.</p>"
+  },
+  {
+    "q": "<h3>What is CORS?</h3>",
+    "a": "<p>CORS (Cross-Origin Resource Sharing) is a security feature implemented by browsers to prevent web pages from making requests to a domain different from the one that served the web page. It is a way to allow controlled access to resources on a server from a different origin, using HTTP headers to permit or deny requests based on the server’s configuration.</p>"
+  },
+  {
+    "q": "<h3>How do you connect an API to the database?</h3>",
+    "a": "<p>To connect an API to a database, you typically follow these steps:\n1. Choose a Database: Decide on the type of database (e.g., SQL Server, MySQL, PostgreSQL).\n2. Install Database Client: Ensure the necessary database client libraries are installed in your project.\n3. Configure Connection String: Add the connection string to your application configuration.\n4. Use an ORM or ADO.NET: Utilize an Object-Relational Mapper (ORM) like Entity Framework or directly use ADO.NET for database operations.\n5. Implement Data Access Layer: Create a repository or data access layer to abstract database operations.\n6. Use Dependency Injection: Inject the data access layer into your API controllers to interact with the database.</p>"
+  },
+  {
+    "q": "<h3>How do you use authentication in ASP.NET?</h3>",
+    "a": "<p>Authentication in ASP.NET can be implemented using various mechanisms:\n- Forms Authentication: Traditional approach for web forms applications where users log in through a form.\n- ASP.NET Identity: A membership system that adds login functionality to applications, supporting both local accounts and external logins (e.g., Google, Facebook).\n- JWT (JSON Web Token): A token-based authentication used commonly in APIs, where the server generates a token after successful authentication, which the client uses in subsequent requests.\n- OAuth and OpenID Connect: Standards for delegated authentication and authorization, often used in conjunction with external identity providers.\n- Windows Authentication: Integrates with the Windows operating system for enterprise applications.</p>"
+  },
+  {
+    "q": "<h3>How do you connect a REST API to an SQL database?</h3>",
+    "a": "<p>To connect a REST API to an SQL database:\n1. Set up the Database: Ensure the SQL database is running and accessible.\n2. Configure Connection String: Add the database connection string in the API configuration file (e.g., appsettings.json in ASP.NET Core).\n3. Use an ORM like Entity Framework: Set up Entity Framework to map your database tables to C# models.\n4. Create a Data Context: Define a DbContext class that manages database interactions.\n5. Inject DbContext in Controllers: Use dependency injection to access the DbContext in your API controllers and perform CRUD operations.</p>"
+  },
+  {
+    "q": "<h3>How do you set up a REST API?</h3>",
+    "a": "<p>To set up a REST API in ASP.NET Core:\n1. Create a New Project: Use the dotnet new command to create an ASP.NET Core Web API project.\n2. Define Models: Create C# classes representing the data structures.\n3. Set Up DbContext: Configure a DbContext class if using Entity Framework for database interactions.\n4. Create Controllers: Implement API controllers that expose endpoints for HTTP methods (GET, POST, PUT, DELETE).\n5. Configure Routing: Define routes in the controllers to handle incoming requests.\n6. Test the API: Use tools like Postman or Swagger to test your API endpoints.\n7. Deploy: Deploy the API to a server or cloud service.</p>"
+  },
+  {
+    "q": "<h3>How do you connect to the database with an API?</h3>",
+    "a": "<p>To connect an API to a database:\n1. Add the Connection String: Include the database connection string in the API’s configuration file.\n2. Set Up Data Access Layer: Use Entity Framework or ADO.NET to create a data access layer.\n3. Inject Dependencies: Use dependency injection to provide the data access layer to API controllers.\n4. Perform CRUD Operations: Implement methods in the API controllers to interact with the database (e.g., querying data, saving new records).</p>"
+  },
+  {
+    "q": "<h3>What’s ASP.NET?</h3>",
+    "a": "<p>ASP.NET is a web application framework developed by Microsoft for building dynamic websites, web applications, and web services. It is part of the larger .NET framework and allows developers to write web applications using languages like C# and VB.NET.</p>"
+  },
+  {
+    "q": "<h3>What’s ASP.NET MVC?</h3>",
+    "a": "<p>ASP.NET MVC is a framework for building web applications using the Model-View-Controller (MVC) pattern. This pattern separates the application into three main components: Model (data), View (UI), and Controller (business logic), enabling cleaner code organization, easier testing, and better scalability.</p>"
+  },
+  {
+    "q": "<h3>How to use Routing in C#?</h3>",
+    "a": "<p>In ASP.NET, routing is used to define the URLs that map to specific controllers and actions. Routing can be configured in the Startup.cs file using the UseRouting and UseEndpoints methods in ASP.NET Core. Routes are defined in the controllers using attributes like [Route(\"api/[controller]\")] or convention-based routing.</p>"
+  },
+  {
+    "q": "<h3>Difference Between POST and PUT?</h3>",
+    "a": "<p>- POST: Used to create a new resource. It is typically not idempotent, meaning repeated requests can create multiple resources.\n- PUT: Used to update an existing resource or create a resource if it doesn’t exist. PUT is idempotent, meaning repeated requests with the same data will not create multiple resources.</p>"
+  },
+  {
+    "q": "<h3>What are the different types of response codes in API?</h3>",
+    "a": "<p>Common HTTP response codes include:\n- 1xx Informational: Request received, continuing process.\n- 2xx Success: The request was successfully received, understood, and accepted (e.g., 200 OK, 201 Created).\n- 3xx Redirection: Further action must be taken to complete the request (e.g., 301 Moved Permanently, 302 Found).\n- 4xx Client Error: The request contains bad syntax or cannot be fulfilled (e.g., 400 Bad Request, 404 Not Found).\n- 5xx Server Error: The server failed to fulfill a valid request (e.g., 500 Internal Server Error, 503 Service Unavailable).</p>"
+  },
+  {
+    "q": "<h3>How to create an API?</h3>",
+    "a": "<p>To create an API:\n1. Choose a Framework: Select a web framework like ASP.NET Core.\n2. Define Models: Create data models that represent the resources.\n3. Set Up Routing: Define routes to map URLs to controller actions.\n4. Implement Controllers: Create controllers that handle HTTP requests and perform actions on the data models.\n5. Add Services: Include any necessary services like authentication, logging, or data access.\n6. Deploy: Host the API on a server or in the cloud.</p>"
+  },
+  {
+    "q": "<h3>There are how many types of Authentication?</h3>",
+    "a": "<p>There are several types of authentication:\n- Basic Authentication: Uses a username and password.\n- Token-based Authentication: Uses tokens, such as JWT, for authentication.\n- OAuth/OpenID Connect: Delegates authentication to an external provider.\n- Windows Authentication: Uses Windows credentials for authentication.\n- Multi-factor Authentication (MFA): Requires multiple forms of verification.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between Authentication and Authorization?</h3>",
+    "a": "<p>- Authentication: The process of verifying the identity of a user or system.\n- Authorization: The process of determining what an authenticated user is allowed to do. Authorization typically happens after authentication and defines what resources and operations the user has access to.</p>"
+  },
+  {
+    "q": "<h3>How do you close a connection from a deployed API if it were attacked maliciously?</h3>",
+    "a": "<p>To close a connection from a deployed API during a malicious attack:\n1. Revoke Access Tokens: If using token-based authentication, revoke any tokens that might be compromised.\n2. Update Firewall Rules: Block IP addresses or IP ranges from where the attack originates.\n3. Shut Down Services: Temporarily disable the API service to mitigate the attack.\n4. Change API Keys/Secrets: Rotate any API keys or credentials that might be exposed.\n5. Implement Rate Limiting: Introduce rate limiting to prevent excessive requests from overwhelming the API.</p>"
+  },
+  {
+    "q": "<h3>What is a Reject?</h3>",
+    "a": "<p>In the context of promises in JavaScript or asynchronous operations, “reject” refers to the state of a promise when an operation fails. A promise can be either fulfilled (resolved) or rejected (failed). When a promise is rejected, it typically carries an error message or object that describes the failure.</p>"
+  },
+  {
+    "q": "<h3>What is Razor and a .cshtml file?</h3>",
+    "a": "<p>Razor is a markup syntax used in ASP.NET for embedding server-based code into web pages. It allows for a clean mix of HTML and C# code. A .cshtml file is a Razor file that contains HTML and Razor syntax, and it is used to define views in ASP.NET MVC and ASP.NET Core applications.</p>"
+  },
+  {
+    "q": "<h3>Can you have more than one model in a view?</h3>",
+    "a": "<p>Yes, you can pass multiple models to a view in ASP.NET MVC. This can be done by creating a composite model (view model) that contains multiple models or by using ViewBag, ViewData, or Tuple to pass multiple objects to the view.</p>"
+  },
+  {
+    "q": "<h3>What is Caching?</h3>",
+    "a": "<p>Caching refers to the process of storing data in a temporary storage location (cache) to improve the performance of an application. Caching reduces the need to repeatedly fetch the same data from a slower source, such as a database or an external API, by serving it from the faster cache storage.</p>"
+  },
+  {
+    "q": "<h3>What is State Management in .NET?</h3>",
+    "a": "<p>State management in .NET refers to the techniques used to manage the state of an application across requests. In web applications, state management is necessary because the HTTP protocol is stateless. Common state management techniques include:\n- Session State: Stores user data across multiple requests within a session.\n- View State: Stores data in a hidden field on the web page itself.\n- Application State: Stores data shared across all users of the application.\n- Cookies: Small pieces of data stored on the client’s browser.\n- Query Strings: Data passed in the URL as part of the request.\nThese methods allow developers to maintain data between requests, which is essential for user interactions like shopping carts, form submissions, and user authentication/</p>"
+  }
+]
+

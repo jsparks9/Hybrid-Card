@@ -1,0 +1,174 @@
+[
+  {
+    "q": "<h3>Function vs Stored Procedure</h3>",
+    "a": "<p>A <strong>function</strong> in SQL Server is a routine that returns a single value (scalar functions) or a table (table-valued functions). Functions can be used in SQL statements like SELECT, WHERE, and JOIN clauses.<br><br>A <strong>stored procedure</strong> is a group of one or more SQL statements that perform a specific task. Stored procedures can accept input parameters, return output parameters, and execute complex business logic, but unlike functions, they do not return a value that can be directly used in SQL statements like SELECT.</p>"
+  },
+  {
+    "q": "<h3>Query Commands</h3>",
+    "a": "<p>Common SQL query commands include:<br><ul><li><code>SELECT</code>: Retrieves data from a database.</li><li><code>INSERT</code>: Adds new records to a table.</li><li><code>UPDATE</code>: Modifies existing records in a table.</li><li><code>DELETE</code>: Removes records from a table.</li><li><code>CREATE</code>: Creates a new table, database, or other database objects.</li><li><code>ALTER</code>: Modifies an existing database object.</li><li><code>DROP</code>: Deletes a table, database, or other database objects.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Index</h3>",
+    "a": "<p>An index in SQL Server is a database object that improves the speed of data retrieval operations on a table. Indexes can be created on one or more columns and are used to speed up queries that involve searching, sorting, and filtering data. Common types include clustered and non-clustered indexes.</p>"
+  },
+  {
+    "q": "<h3>Outer Join SQL Statement</h3>",
+    "a": "<p>This SQL statement performs a <strong>LEFT OUTER JOIN</strong> between <code>Table1</code> and <code>Table2</code>, meaning it returns all records from <code>Table1</code> and the matched records from <code>Table2</code>. If there is no match, NULL values will be returned for columns from <code>Table2</code>.<br><br><code>SELECT a.column1, b.column2<br>FROM Table1 a<br>LEFT JOIN Table2 b ON a.common_field = b.common_field;</code></p>"
+  },
+  {
+    "q": "<h3>Why Use an Abstract Class</h3>",
+    "a": "<p>An abstract class in object-oriented programming is used when you want to provide a common base class with some implementation for other classes to inherit from, but you also want to enforce that certain methods must be implemented by derived classes. Regular classes can be instantiated and used directly, whereas abstract classes cannot be instantiated and require subclasses to provide implementations for abstract methods.</p>"
+  },
+  {
+    "q": "<h3>Experience in Coding</h3>",
+    "a": "<p>I am designed to assist with various coding-related queries, covering a wide range of languages and technologies. My responses are based on the large-scale dataset I've been trained on, which includes coding knowledge up to 2023.</p>"
+  },
+  {
+    "q": "<h3>Types of SQL Joins</h3>",
+    "a": "<p><ul><li><strong>INNER JOIN</strong>: Returns records that have matching values in both tables.</li><li><strong>LEFT (OUTER) JOIN</strong>: Returns all records from the left table, and the matched records from the right table. If no match, NULLs are returned from the right side.</li><li><strong>RIGHT (OUTER) JOIN</strong>: Returns all records from the right table, and the matched records from the left table. If no match, NULLs are returned from the left side.</li><li><strong>FULL (OUTER) JOIN</strong>: Returns all records when there is a match in either left or right table. If no match, NULLs are returned.</li></ul></p>"
+  },
+  {
+    "q": "<h3>SQL Statement to Match Specific Columns</h3>",
+    "a": "<p>This query matches specific columns from <code>Table1</code> to <code>Table2</code> based on a condition.<br><br><code>SELECT a.column1, a.column2, b.column3<br>FROM Table1 a<br>JOIN Table2 b ON a.common_field = b.common_field<br>WHERE a.column1 = 'specific_value' AND b.column3 = 'specific_value';</code></p>"
+  },
+  {
+    "q": "<h3>Primary Key</h3>",
+    "a": "<p>A primary key is a unique identifier for a record in a table. It ensures that each record is unique and cannot contain NULL values.</p>"
+  },
+  {
+    "q": "<h3>Foreign Key</h3>",
+    "a": "<p>A foreign key is a field in one table that uniquely identifies a row in another table. It creates a relationship between the two tables and ensures referential integrity.</p>"
+  },
+  {
+    "q": "<h3>Unique Key</h3>",
+    "a": "<p>A unique key ensures that all values in a column or a set of columns are distinct. Unlike the primary key, a table can have multiple unique keys, and they can accept NULL values (but only one NULL per column in the unique key).</p>"
+  },
+  {
+    "q": "<h3>Identity Keyword in SQL</h3>",
+    "a": "<p>The <code>IDENTITY</code> keyword is used to define an auto-incrementing column in SQL Server. It automatically generates a unique value for each new row inserted into the table.</p>"
+  },
+  {
+    "q": "<h3>Basic SQL Constructs</h3>",
+    "a": "<p><ul><li><strong>SELECT</strong>: To retrieve data.</li><li><strong>INSERT</strong>: To add new data.</li><li><strong>UPDATE</strong>: To modify existing data.</li><li><strong>DELETE</strong>: To remove data.</li><li><strong>CREATE</strong>: To create database objects like tables.</li><li><strong>DROP</strong>: To delete database objects.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Basic Tables in an Employee Database</h3>",
+    "a": "<p><ul><li><strong>Employee</strong>: Stores employee personal information.</li><li><strong>Department</strong>: Stores department details.</li><li><strong>Roles</strong>: Stores job roles within the company.</li><li><strong>Salary</strong>: Stores employee salary information.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Key Information in an Employee Database</h3>",
+    "a": "<p><ul><li>Employee ID</li><li>Name</li><li>Date of Birth</li><li>Address</li><li>Contact Information</li><li>Job Role</li><li>Department</li><li>Salary Information</li><li>Employment Start Date</li><li>Manager/Supervisor ID</li></ul></p>"
+  },
+  {
+    "q": "<h3>Relationship for Finding Basic Salary</h3>",
+    "a": "<p>Use a <strong>Foreign Key</strong> relationship between the <code>Roles</code> table and the <code>Salary</code> table, where the <code>RoleID</code> in the <code>Roles</code> table links to <code>RoleID</code> in the <code>Salary</code> table.</p>"
+  },
+  {
+    "q": "<h3>Primary Index</h3>",
+    "a": "<p>A primary index in SQL Server is an index that is automatically created when a primary key is defined on a table. It is typically a clustered index, meaning the physical order of data rows in the table is the same as the logical order of the index.</p>"
+  },
+  {
+    "q": "<h3>Primary Key</h3>",
+    "a": "<p>A primary key is a unique identifier for records in a table, ensuring that each record is unique and that no NULL values are allowed.</p>"
+  },
+  {
+    "q": "<h3>Multiple Primary Keys</h3>",
+    "a": "<p>A table cannot have multiple primary keys. However, it can have a composite primary key, which is a combination of two or more columns that uniquely identify each record.</p>"
+  },
+  {
+    "q": "<h3>Multiple Unique Keys</h3>",
+    "a": "<p>Yes, a table can have multiple unique keys. Each unique key enforces a unique constraint on the values within the key's columns.</p>"
+  },
+  {
+    "q": "<h3>Truncate vs Delete Commands</h3>",
+    "a": "<p><strong>DELETE</strong>: Removes rows from a table based on a condition and can be rolled back.<br><br><strong>TRUNCATE</strong>: Removes all rows from a table, resetting any identity columns, and cannot be rolled back.</p>"
+  },
+  {
+    "q": "<h3>Find All People Aged 30</h3>",
+    "a": "<p><code>SELECT * FROM XYZ WHERE Age = 30;</code></p>"
+  },
+  {
+    "q": "<h3>Composite, Foreign, and Primary Key Relations</h3>",
+    "a": "<p><ul><li><strong>Composite Key</strong>: A key that consists of two or more columns to uniquely identify a row in a table.</li><li><strong>Foreign Key</strong>: A key that links two tables together.</li><li><strong>Primary Key</strong>: A unique identifier for each record in a table.</li></ul></p>"
+  },
+  {
+    "q": "<h3>SQL Datatypes</h3>",
+    "a": "<p><ul><li><code>INT</code>: Integer data.</li><li><code>VARCHAR</code>: Variable-length string.</li><li><code>DATE</code>: Date data.</li><li><code>FLOAT</code>: Floating-point number.</li><li><code>BOOLEAN</code>: Boolean data (TRUE/FALSE).</li></ul></p>"
+  },
+  {
+    "q": "<h3>Examples of Query Commands</h3>",
+    "a": "<p><ul><li><code>SELECT</code>: Retrieve data from tables.</li><li><code>INSERT</code>: Add new rows to a table.</li><li><code>UPDATE</code>: Modify existing data in a table.</li><li><code>DELETE</code>: Remove data from a table.</li></ul></p>"
+  },
+  {
+    "q": "<h3>SQL Commands to Access a Table</h3>",
+    "a": "<p><ul><li><code>SELECT</code>: To retrieve data from a table.</li><li><code>INSERT INTO</code>: To insert new data into a table.</li><li><code>UPDATE</code>: To update existing data within a table.</li><li><code>DELETE</code>: To remove data from a table.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Have you created a table?</h3>",
+    "a": "<p>Yes, in Microsoft SQL Server, creating a table involves defining the table structure, including columns and their data types, primary keys, and any constraints. For example:<br><br><code>CREATE TABLE Employees (<br>EmployeeID INT PRIMARY KEY,<br>FirstName VARCHAR(50),<br>LastName VARCHAR(50),<br>DateOfBirth DATE,<br>DepartmentID INT,<br>Salary DECIMAL(10, 2)<br>);</code></p>"
+  },
+  {
+    "q": "<h3>Difference Between TRUNCATE and DELETE Statement</h3>",
+    "a": "<p><strong>TRUNCATE</strong>:<br><ul><li>Removes all rows from a table, resetting any identity columns.</li><li>Cannot be rolled back.</li><li>Does not fire triggers.</li><li>Faster as it does not log individual row deletions.</li></ul><br><strong>DELETE</strong>:<br><ul><li>Removes rows based on a condition or removes all rows if no condition is specified.</li><li>Can be rolled back.</li><li>Fires triggers.</li><li>Logs each row deletion, making it slower than TRUNCATE.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Different Joins Used</h3>",
+    "a": "<p><ul><li><strong>INNER JOIN</strong>: Returns rows with matching values in both tables.</li><li><strong>LEFT JOIN (LEFT OUTER JOIN)</strong>: Returns all rows from the left table and matched rows from the right table. Unmatched rows from the right table return NULL.</li><li><strong>RIGHT JOIN (RIGHT OUTER JOIN)</strong>: Returns all rows from the right table and matched rows from the left table. Unmatched rows from the left table return NULL.</li><li><strong>FULL JOIN (FULL OUTER JOIN)</strong>: Returns all rows where there is a match in either left or right table. Unmatched rows in one table are returned as NULL.</li><li><strong>CROSS JOIN</strong>: Returns the Cartesian product of both tables.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Difference Between LEFT JOIN and LEFT OUTER JOIN</h3>",
+    "a": "<p>There is no difference between <code>LEFT JOIN</code> and <code>LEFT OUTER JOIN</code>. They are interchangeable terms; <code>LEFT OUTER JOIN</code> is the full form, while <code>LEFT JOIN</code> is a shorthand.</p>"
+  },
+  {
+    "q": "<h3>Normalization in Database</h3>",
+    "a": "<p>Normalization is the process of organizing a database into tables to reduce redundancy and improve data integrity. It involves dividing large tables into smaller, related tables and linking them using relationships like foreign keys. The process typically follows several normal forms (1NF, 2NF, 3NF, etc.), each addressing specific types of redundancy.</p>"
+  },
+  {
+    "q": "<h3>Relational Databases</h3>",
+    "a": "<p>Relational databases store data in tables that are related to each other through keys (primary keys and foreign keys). They follow a structured format, using SQL for querying and maintaining data integrity. Examples include Microsoft SQL Server, MySQL, and PostgreSQL.</p>"
+  },
+  {
+    "q": "<h3>Difference Between CHAR and VARCHAR</h3>",
+    "a": "<p><strong>CHAR</strong>: Fixed-length data type. The storage size is always the same, regardless of the actual content length. If a CHAR column is defined as CHAR(10), it will always use 10 bytes.<br><br><strong>VARCHAR</strong>: Variable-length data type. The storage size is dynamic and depends on the actual content length. If a VARCHAR column is defined as VARCHAR(10) and the content is 'abc', it will only use 3 bytes.</p>"
+  },
+  {
+    "q": "<h3>CROSS JOIN</h3>",
+    "a": "<p>A CROSS JOIN returns the Cartesian product of two tables. Every row in the first table is combined with every row in the second table, resulting in all possible combinations of rows.</p>"
+  },
+  {
+    "q": "<h3>Difference Between DROP and DELETE</h3>",
+    "a": "<p><strong>DROP</strong>: Permanently removes a table or database from the database system. All data, schema, and relationships are removed.<br><br><strong>DELETE</strong>: Removes rows from a table but does not delete the table structure. The table remains in the database, and the operation can be rolled back if within a transaction.</p>"
+  },
+  {
+    "q": "<h3>Trigger in SQL</h3>",
+    "a": "<p>A trigger is a special kind of stored procedure that automatically executes when a specific event occurs in the database, such as <code>INSERT</code>, <code>UPDATE</code>, or <code>DELETE</code>. Triggers are often used to enforce business rules, validate data, or audit changes.</p>"
+  },
+  {
+    "q": "<h3>Index in SQL</h3>",
+    "a": "<p>An index is a database object that improves the speed of data retrieval operations on a table. It allows the database to find and retrieve specific rows much faster than scanning the entire table. Common types include clustered and non-clustered indexes.</p>"
+  },
+  {
+    "q": "<h3>Truncate and Delete</h3>",
+    "a": "<p><strong>TRUNCATE</strong>: Quickly removes all rows from a table without logging individual row deletions. It cannot be rolled back and resets identity columns.<br><br><strong>DELETE</strong>: Removes rows based on conditions and logs each deletion, making it slower but reversible within a transaction.</p>"
+  },
+  {
+    "q": "<h3>Stored Procedure</h3>",
+    "a": "<p>A stored procedure is a precompiled collection of SQL statements and optional control-of-flow statements. It is stored in the database and can be executed as needed, often used for repetitive tasks, data validation, and business logic encapsulation.</p>"
+  },
+  {
+    "q": "<h3>SQL Command Object</h3>",
+    "a": "<p>An SQL command object is a programming interface (in ADO.NET, for example) that is used to execute SQL statements or stored procedures against a database. It can execute commands such as SELECT, INSERT, UPDATE, DELETE, and stored procedures.</p>"
+  },
+  {
+    "q": "<h3>Creating a Database</h3>",
+    "a": "<p>To create a new database in SQL Server, use the <code>CREATE DATABASE</code> statement:<br><br><code>CREATE DATABASE MyDatabase;</code></p>"
+  },
+  {
+    "q": "<h3>Examples of Query Commands</h3>",
+    "a": "<p><ul><li><code>SELECT</code>: Retrieve data from a table.</li><li><code>INSERT</code>: Add new records to a table.</li><li><code>UPDATE</code>: Modify existing records in a table.</li><li><code>DELETE</code>: Remove records from a table.</li></ul></p>"
+  },
+  {
+    "q": "<h3>Referencing Two Tables</h3>",
+    "a": "<p>When referencing two tables in a query, use a join condition to relate the tables. Example:<br><br><code>SELECT a.EmployeeID, a.FirstName, b.Salary<br>FROM Employees a<br>JOIN Salaries b ON a.EmployeeID = b.EmployeeID;</code><br><br>This query selects data from both the <code>Employees</code> and <code>Salaries</code> tables by joining them on the <code>EmployeeID</code> field.</p>"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "q": "<h3>What is Encapsulation in Object-Oriented Programming?</h3>",
+    "a": "<p>Encapsulation involves bundling the data (attributes) and the methods (functions) that operate on the data into a single unit, called a class. This principle helps protect the internal state of an object by restricting direct access to some of its components. This is typically done by making some fields private and providing public methods to access and modify these fields.</p>"
+  },
+  {
+    "q": "<h3>What is Abstraction in Object-Oriented Programming?</h3>",
+    "a": "<p>Abstraction involves hiding the complex implementation details of a system and exposing only the essential features or interfaces. This allows a user to interact with the object at a high level without needing to understand the underlying complexity.</p>"
+  },
+  {
+    "q": "<h3>What is Inheritance in Object-Oriented Programming?</h3>",
+    "a": "<p>Inheritance allows a new class, known as a subclass or derived class, to inherit properties and behavior (methods) from an existing class, called a superclass or base class. This promotes code reuse and establishes a natural hierarchy between classes.</p>"
+  },
+  {
+    "q": "<h3>What is Polymorphism in Object-Oriented Programming?</h3>",
+    "a": "<p>Polymorphism allows objects of different classes to be treated as objects of a common superclass. The most common use of polymorphism in OOP is when a parent class reference is used to refer to a child class object. It allows methods to do different things based on the object it is acting upon, even though they share the same method name.</p>"
+  },
+  {
+    "q": "<h3>What is the benefit of inheritance?</h3>",
+    "a": "<p>Inheritance promotes code reuse, reduces redundancy, and enhances the maintainability of code. By allowing a class to inherit attributes and methods from a parent class, developers can create more specialized classes without rewriting code. This also facilitates easier updates and enhancements, as changes made to the parent class automatically propagate to the child classes.</p>"
+  },
+  {
+    "q": "<h3>What is a class?</h3>",
+    "a": "<p>A class is a blueprint or template for creating objects in OOP. It defines the data (attributes) and the behaviors (methods) that the objects created from the class will have. In essence, a class is a user-defined data type that represents a concept or entity in a program.</p>"
+  },
+  {
+    "q": "<h3>What is an object?</h3>",
+    "a": "<p>An object is an instance of a class. It is a concrete entity that has a state (represented by the attributes) and behavior (represented by the methods) as defined by its class. Objects are the actual entities that interact with one another in an OOP system.</p>"
+  },
+  {
+    "q": "<h3>What are immutable objects and how can they be changed?</h3>",
+    "a": "<p>Immutable objects are objects whose state cannot be changed after they are created. In C#, examples of immutable objects include instances of the <code>System.String</code> class. To \"change\" an immutable object, you don't modify the existing object; instead, you create a new object with the modified state. For example, to modify a string, you would generate a new string based on the existing one.</p>"
+  },
+  {
+    "q": "<h3>Describe how you would use Polymorphism in one of your projects?</h3>",
+    "a": "<p>In a project involving a quiz application, polymorphism could be used to handle different types of quiz questions (e.g., multiple choice, true/false, short answer) through a common interface or base class <code>QuizQuestion</code>. Each specific question type would be implemented as a subclass of <code>QuizQuestion</code>. This allows the application to treat all quiz questions uniformly, while the specific behavior for each type of question is handled by the respective subclass.</p>"
+  },
+  {
+    "q": "<h3>What is Overloading? What is Overriding? When would you use these and why?</h3>",
+    "a": "<p><strong>Overloading</strong>: Method overloading is the ability to define multiple methods with the same name but different signatures (i.e., different parameter lists) within the same class. Overloading is useful when you want to perform similar operations with different types or numbers of inputs.</p><p><strong>Overriding</strong>: Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. Overriding is used to change or extend the behavior of an inherited method to better fit the needs of the subclass.</p><p>You would use overloading when you need to offer multiple ways to perform a similar action. Overriding is used when you want a child class to have a specific behavior different from its parent class.</p>"
+  },
+  {
+    "q": "<h3>What is Encapsulation?</h3>",
+    "a": "<p>Encapsulation is the principle of bundling the data (fields) and the code (methods) that manipulates the data into a single unit or class. It also involves restricting direct access to some of the object's components, which is achieved by making fields private and providing public getter and setter methods. This ensures that the internal representation of an object is hidden from the outside, providing a controlled way to access and modify the object's state.</p>"
+  },
+  {
+    "q": "<h3>What are abstract methods?</h3>",
+    "a": "<p>An abstract method is a method that is declared in an abstract class but does not have any implementation in the abstract class. Subclasses that inherit from the abstract class must provide an implementation for the abstract methods. Abstract methods are used to define a common interface for all subclasses while allowing each subclass to implement the method in its specific way.</p>"
+  },
+  {
+    "q": "<h3>What is Interface?</h3>",
+    "a": "<p>An interface in C# is a contract that defines a set of methods and properties that a class must implement. Interfaces do not contain any implementation; they only declare the signatures of methods, properties, events, or indexers. A class can implement multiple interfaces, allowing it to inherit behaviors from multiple sources.</p>"
+  },
+  {
+    "q": "<h3>What is inheritance and why use it?</h3>",
+    "a": "<p>Inheritance is a mechanism in OOP that allows a class (child or derived class) to inherit properties and behaviors (methods) from another class (parent or base class). Inheritance promotes code reuse, establishes a natural hierarchy, and enables polymorphism, where a parent class reference can point to a child class object.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between overload and override?</h3>",
+    "a": "<p><strong>Overload</strong>: Method overloading occurs when multiple methods in the same class share the same name but have different parameter lists. It allows methods to perform similar functions with different inputs.</p><p><strong>Override</strong>: Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. This allows the subclass to provide specialized behavior.</p>"
+  },
+  {
+    "q": "<h3>Give me an example of how you have used abstraction in one of your projects?</h3>",
+    "a": "<p>In a project involving an API for managing user accounts, abstraction was used by defining an abstract class <code>UserAccount</code> that provided a common interface for different types of accounts (e.g., <code>AdminAccount</code>, <code>StandardAccount</code>). The <code>UserAccount</code> class defined abstract methods like <code>Login</code> and <code>Logout</code>, while the subclasses provided specific implementations for these actions based on the type of account.</p>"
+  },
+  {
+    "q": "<h3>When is abstraction necessary?</h3>",
+    "a": "<p>Abstraction is necessary when you want to define a common interface for a set of related classes while hiding the implementation details. It is especially useful when dealing with complex systems, as it allows you to focus on the high-level design and delegate the implementation to specific subclasses. Abstraction is also critical for creating scalable and maintainable code.</p>"
+  },
+  {
+    "q": "<h3>What is overloading?</h3>",
+    "a": "<p>Overloading refers to the ability to define multiple methods with the same name but different parameter lists within the same class. It allows you to provide different ways to perform a similar operation based on the input parameters.</p>"
+  },
+  {
+    "q": "<h3>What is overriding?</h3>",
+    "a": "<p>Overriding occurs when a subclass provides its specific implementation of a method that is already defined in its parent class. This allows the subclass to alter or extend the behavior of the inherited method.</p>"
+  },
+  {
+    "q": "<h3>What is Encapsulation?</h3>",
+    "a": "<p>Encapsulation is the practice of bundling data and methods that operate on that data into a single unit or class. It restricts direct access to some of an object's components and only allows controlled access through public methods. Encapsulation is essential for protecting the internal state of an object and enforcing a clear separation between an object's internal implementation and its external interface.</p>"
+  },
+  {
+    "q": "<h3>What is Polymorphism?</h3>",
+    "a": "<p>Polymorphism is a fundamental concept in object-oriented programming that allows objects of different classes to be treated as objects of a common superclass. The term \"polymorphism\" means \"many shapes\" and refers to the ability of different classes to provide a unique implementation of a method that is defined in a parent class or interface. This allows the same method to perform differently depending on the object that is calling it. Polymorphism is often implemented through method overriding or interfaces.</p>"
+  },
+  {
+    "q": "<h3>What is Run-time Polymorphism and Compile-time Polymorphism?</h3>",
+    "a": "<p><strong>Run-time Polymorphism</strong>: Also known as dynamic polymorphism, this occurs when the method to be invoked is determined at runtime. This is typically achieved through method overriding, where a subclass provides a specific implementation of a method that is defined in its superclass. Run-time polymorphism allows for more flexible and extensible code but comes with a performance cost due to the overhead of method resolution at runtime.</p><p><strong>Compile-time Polymorphism</strong>: Also known as static polymorphism, this occurs when the method to be invoked is determined at compile time. This is typically achieved through method overloading or operator overloading, where multiple methods share the same name but differ in their parameter lists. Compile-time polymorphism is faster than run-time polymorphism because the method resolution happens during compilation.</p>"
+  },
+  {
+    "q": "<h3>What are the OOP pillars?</h3>",
+    "a": "<p>The four pillars of Object-Oriented Programming (OOP) are:</p><ul><li><strong>Encapsulation</strong>: The bundling of data and methods that operate on that data within a class, with access controls to restrict direct manipulation of the object's state.</li><li><strong>Abstraction</strong>: The practice of exposing only the essential features of an object while hiding the implementation details.</li><li><strong>Inheritance</strong>: The mechanism by which a new class (subclass) can inherit properties and behaviors (methods) from an existing class (superclass), promoting code reuse and establishing a class hierarchy.</li><li><strong>Polymorphism</strong>: The ability for different classes to be treated as instances of a common superclass, with methods that can perform differently based on the object's actual class.</li></ul>"
+  },
+  {
+    "q": "<h3>What is method overloading?</h3>",
+    "a": "<p>Method overloading is a feature in OOP that allows multiple methods to have the same name but different signatures within the same class. The signature of a method is defined by the number, type, and order of its parameters. Method overloading allows a class to perform a similar action in different ways depending on the input parameters. For example, a <code>Print</code> method might be overloaded to handle printing integers, strings, or floating-point numbers.</p>"
+  },
+  {
+    "q": "<h3>What is the difference between Abstraction and Polymorphism?</h3>",
+    "a": "<p><strong>Abstraction</strong>: Abstraction focuses on hiding the complex implementation details of a system and exposing only the essential features through interfaces or abstract classes. It provides a simplified view of an object and enables the use of objects without needing to understand their underlying complexity.</p><p><strong>Polymorphism</strong>: Polymorphism, on the other hand, refers to the ability of different classes to respond to the same method call in different ways. It allows methods to be overridden in subclasses or implemented differently in different classes that share a common interface or base class. While abstraction is about defining what an object does, polymorphism is about defining how different objects do the same thing differently.</p>"
+  },
+  {
+    "q": "<h3>What are the two ways of inheriting something in C#?</h3>",
+    "a": "<p>The two ways of inheriting something in C# are:</p><ul><li><strong>Class Inheritance</strong>: This is the most common form of inheritance, where a class (subclass) inherits fields and methods from another class (superclass). The subclass can override or extend the behavior of the superclass.</li><li><strong>Interface Implementation</strong>: A class can also \"inherit\" from an interface by implementing its methods. An interface defines a contract that the class must follow, but it does not provide any implementation. The class that implements the interface must provide concrete implementations for all the methods defined by the interface.</li></ul>"
+  }
+]
